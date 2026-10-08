@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="tr" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meriç-Tunca-Arda SWOT & Hibrit ML Nehir Akım ve Taşkın İzleme Portalı</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: "#f0f9ff",
+              100: "#e0f2fe",
+              400: "#38bdf8",
+              500: "#0ea5e9",
+              600: "#0284c7",
+              900: "#0c4a6e",
+            },
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Leaflet CSS & JS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- Plotly.js -->
+  <script src="https://cdn.plot.ly/plotly-2.30.0.min.js"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col font-sans antialiased">
+
+  <!-- Top Navbar -->
+  <header class="bg-slate-900/90 border-b border-slate-800 sticky top-0 z-50 backdrop-blur-md px-4 py-3">
+    <div class="max-w-[1720px] mx-auto flex flex-col md:flex-row items-center justify-between gap-3">
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-lg bg-sky-500/10 border border-sky-500/30 flex items-center justify-center text-sky-400 font-bold text-xl shadow-inner">
+          🛰️
+        </div>
+        <div>
+          <h1 class="text-base md:text-lg font-bold text-white tracking-tight flex items-center gap-2">
+            Meriç-Tunca-Arda Sınıraşan Havzaları
+            <span class="text-xs px-2 py-0.5 rounded bg-sky-950 border border-sky-800 text-sky-400 font-mono">SWOT L4 & ML</span>
+          </h1>
+          <p class="text-xs text-slate-400">
+            NASA/CNES SWOT Uydu Verisi & Hibrit Makine Öğrenmesi Tabanlı Nehir Akım ve Taşkın Erken Uyarı Sistemi
+          </p>
+        </div>
+      </div>
+
+      <!-- Live metrics and status pills -->
+      <div class="flex flex-wrap items-center gap-2.5">
+        <div class="flex items-center space-x-2 px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700/80 text-xs">
+          <span class="text-slate-400">Edirne Birleşim Debisi:</span>
+          <span id="total-edirne-flow" class="font-mono font-bold text-sky-400 text-sm">-- m³/s</span>
+        </div>
+
+        <div id="basin-status-badge" class="px-3 py-1 text-xs font-semibold rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 glow-dot-emerald">
+          DURUM KONTROL EDİLİYOR...
+        </div>
+
+        <div id="alerts-count-badge" class="px-2.5 py-1 text-xs font-semibold rounded-full bg-rose-500/20 text-rose-400 border border-rose-500/30">
+          0 Aktif Uyarı
+        </div>
+
+        <button id="refresh-btn" title="Verileri Güncelle" class="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 text-xs flex items-center gap-1.5 transition">
+          <i data-lucide="refresh-cw" class="w-3.5 h-3.5"></i>
+          <span>Yenile</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Control & Filter Bar -->
+  <div class="bg-slate-900/60 border-b border-slate-800/80 px-4 py-2.5">
+    <div class="max-w-[1720px] mx-auto flex flex-wrap items-center justify-between gap-3 text-xs">
+      <div class="flex flex-wrap items-center gap-3">
+        <!-- Station selection -->
+        <div class="flex items-center space-x-2">
+          <label for="station-select" class="text-slate-400 font-medium flex items-center gap-1">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-amber-400"></i> AGİ İstasyonu:
+          </label>
+          <select id="station-select" class="bg-slate-800 border border-slate-700 rounded-md px-2.5 py-1 text-slate-200 focus:outline-none focus:border-sky-500 font-medium">
+            <option value="D01A001" selected>Kirişhane AGİ (Meriç - Edirne Merkez)</option>
+            <option value="D01A003">İpsala AGİ (Meriç - Mansap Kesiti)</option>
+            <option value="D01A005">Suakacağı AGİ (Tunca - Sınır Girişi)</option>
+            <option value="D01A006">Değirmenyeni AGİ (Tunca - Sarayiçi)</option>
+            <option value="D01A008">Arda Köprüsü AGİ (Arda - Meriç Kavşağı)</option>
+          </select>
+        </div>
+
+        <!-- Time range selection -->
+        <div class="flex items-center space-x-2">
+          <label for="time-select" class="text-slate-400 font-medium flex items-center gap-1">
+            <i data-lucide="calendar" class="w-3.5 h-3.5 text-sky-400"></i> Zaman Penceresi:
+          </label>
+          <select id="time-select" class="bg-slate-800 border border-slate-700 rounded-md px-2.5 py-1 text-slate-200 focus:outline-none focus:border-sky-500">
+            <option value="30">Son 30 Gün</option>
+            <option value="90">Son 90 Gün</option>
+            <option value="180" selected>Son 180 Gün (6 Ay)</option>
+            <option value="365">Son 365 Gün (1 Yıl)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Quick summary pills -->
+      <div class="flex items-center space-x-4 text-slate-400 text-[11px]">
+        <div>Meriç (Kirişhane): <span id="kirishane-flow-metric" class="text-sky-300 font-semibold font-mono">--</span></div>
+        <div>Tunca (Değirmenyeni): <span id="degirmenyeni-flow-metric" class="text-emerald-300 font-semibold font-mono">--</span></div>
+        <div class="text-slate-500">SWORD Segmentleri: <span class="text-slate-300 font-semibold">12 Reach / 36 Node</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Grid Content -->
+  <main class="flex-1 max-w-[1720px] w-full mx-auto p-3 md:p-4 grid grid-cols-1 lg:grid-cols-12 gap-4">
+
+    <!-- LEFT / TOP COLUMN: Panel 1 (Interactive Map) + Early Warnings (5 cols) -->
+    <div class="lg:col-span-5 flex flex-col gap-4">
+
+      <!-- PANEL 1: INTERACTIVE BASIN MAP -->
+      <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-lg flex flex-col h-[520px]">
+        <div class="px-4 py-2.5 bg-slate-800/60 border-b border-slate-800 flex items-center justify-between text-xs">
+          <div class="font-bold text-slate-200 flex items-center gap-1.5">
+            <i data-lucide="map" class="w-4 h-4 text-sky-400"></i>
+            <span>İnteraktif Sınıraşan Havza Haritası (SWORD Reach & Barajlar)</span>
+          </div>
+          <div class="flex items-center space-x-2 text-[11px]">
+            <span class="inline-flex items-center gap-1 text-emerald-400"><span class="w-2 h-2 rounded-full bg-emerald-500"></span> Normal</span>
+            <span class="inline-flex items-center gap-1 text-amber-400"><span class="w-2 h-2 rounded-full bg-amber-500"></span> İkaz</span>
+            <span class="inline-flex items-center gap-1 text-rose-400"><span class="w-2 h-2 rounded-full bg-rose-500"></span> Taşkın</span>
+          </div>
+        </div>
+
+        <!-- Map Container -->
+        <div class="relative flex-1 w-full">
+          <div id="map"></div>
+
+          <!-- Floating legend / help overlay -->
+          <div class="absolute bottom-3 left-3 z-[1000] bg-slate-900/90 backdrop-blur-md p-2 rounded-lg border border-slate-800 text-[10px] space-y-1 text-slate-300 shadow-md">
+            <div class="font-bold text-sky-400">Harita Katmanları & İşaretler</div>
+            <div>🔵 Segmentler: SWORD v17c Nehir Hatları</div>
+            <div>🟢/🟡/🔴 Daireler: DSİ Edirne AGİ İstasyonları</div>
+            <div>🏛️ Mavi Kutular: Bulgaristan Memba Barajları</div>
+            <div class="text-[9px] text-slate-500">Segmentlere veya istasyonlara tıklayarak detay açın</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PANEL 3: TRANSBOUNDARY EARLY WARNING & BILATERAL BASIN STATUS -->
+      <div class="bg-slate-900 border border-slate-800 rounded-xl p-4 shadow-lg flex flex-col space-y-3">
+        <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+          <div class="font-bold text-slate-200 text-sm flex items-center gap-1.5">
+            <i data-lucide="shield-alert" class="w-4 h-4 text-rose-400"></i>
+            <span>Sınıraşan Taşkın Erken Uyarı & Lead-Time (Varış Süresi)</span>
+          </div>
+          <span class="text-[11px] text-slate-400">Bulgaristan Memba Hidrolik Dalgası</span>
+        </div>
+
+        <!-- Alerts List Container -->
+        <div id="alerts-container" class="space-y-2.5 max-h-[300px] overflow-y-auto pr-1">
+          <!-- Populated by JS -->
+        </div>
+
+        <!-- QC Parameter Simulator Accordion -->
+        <div class="pt-2 border-t border-slate-800/80">
+          <details class="group text-xs">
+            <summary class="cursor-pointer font-semibold text-sky-400 hover:text-sky-300 flex items-center justify-between py-1">
+              <span>⚙️ SWOT Segment QC ve Kalite Kontrol Simülatörü</span>
+              <span class="transition group-open:rotate-180">▼</span>
+            </summary>
+            <div class="p-3 bg-slate-950/60 rounded-lg border border-slate-800 mt-2 space-y-3">
+              <div class="grid grid-cols-2 gap-3">
+                <div>
+                  <label class="text-[11px] text-slate-400">Min. Genişlik Eşiği (m):</label>
+                  <input id="qc-min-width" type="number" value="50" min="20" max="150" class="w-full bg-slate-800 border border-slate-700 rounded px-2 py-1 text-slate-200 mt-1" />
+                </div>
+                <div>
+                  <label class="text-[11px] text-slate-400">Maks. Kot Belirsizliği (wse_u, m):</label>
+                  <input id="qc-max-uncertainty" type="number" step="0.1" value="1.0" min="0.3" max="3.0" class="w-full bg-slate-800 border border-slate-700 rounded px-2 py-1 text-slate-200 mt-1" />
+                </div>
+              </div>
+              <div class="flex items-center space-x-2">
+                <input id="qc-iqr-checkbox" type="checkbox" checked class="rounded bg-slate-800 border-slate-700 text-sky-500 focus:ring-0" />
+                <label for="qc-iqr-checkbox" class="text-[11px] text-slate-300">IQR (1.5x) Ekstrem Aykırı Değer Filtresini Uygula</label>
+              </div>
+              <button id="apply-qc-btn" class="w-full py-1.5 bg-sky-600 hover:bg-sky-500 text-white rounded font-semibold text-xs transition">
+                Filtreleri Çalıştır & Sonuçları Gör
+              </button>
+              <div id="qc-results"></div>
+            </div>
+          </details>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT / BOTTOM COLUMN: Panel 2 (Hydrograph + Metrics + Ridgeline) (7 cols) -->
+    <div class="lg:col-span-7 flex flex-col gap-4">
+
+      <!-- DYNAMIC METRICS CARDS -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+        <!-- RMSE Card -->
+        <div class="bg-slate-900 border border-slate-800 rounded-xl p-3 flex flex-col justify-between shadow-sm">
+          <div class="text-[11px] text-slate-400 font-medium">Hata Karekökü (RMSE)</div>
+          <div id="metric-rmse" class="text-xl font-bold font-mono text-sky-400 mt-1">-- m³/s</div>
+          <div class="text-[10px] text-slate-500 mt-1">Model vs. AGİ Gözlemi</div>
+        </div>
+
+        <!-- Pearson r Card -->
+        <div class="bg-slate-900 border border-slate-800 rounded-xl p-3 flex flex-col justify-between shadow-sm">
+          <div class="text-[11px] text-slate-400 font-medium">Pearson Korelasyon (r)</div>
+          <div id="metric-r" class="text-xl font-bold font-mono text-emerald-400 mt-1">--</div>
+          <div class="text-[10px] text-slate-500 mt-1">Doğrusal Uyum Katsayısı</div>
+        </div>
+
+        <!-- NSE Card -->
+        <div class="bg-slate-900 border border-slate-800 rounded-xl p-3 flex flex-col justify-between shadow-sm">
+          <div class="text-[11px] text-slate-400 font-medium">Nash-Sutcliffe (NSE)</div>
+          <div id="metric-nse" class="text-xl font-bold font-mono text-amber-400 mt-1">--</div>
+          <div class="text-[10px] text-slate-500 mt-1">Model Verimliliği (&gt;0.70 iyi)</div>
+        </div>
+
+        <!-- KGE Card -->
+        <div class="bg-slate-900 border border-slate-800 rounded-xl p-3 flex flex-col justify-between shadow-sm">
+          <div class="text-[11px] text-slate-400 font-medium">Kling-Gupta (KGE)</div>
+          <div id="metric-kge" class="text-xl font-bold font-mono text-indigo-400 mt-1">--</div>
+          <div class="text-[10px] text-slate-500 mt-1">Varyans &amp; Ortalama Dengesi</div>
+        </div>
+      </div>
+
+      <!-- PANEL 2: HYDROGRAPH & ANALYSIS PANEL -->
+      <div class="bg-slate-900 border border-slate-800 rounded-xl p-4 shadow-lg flex flex-col flex-1">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800 pb-3">
+          <div>
+            <h2 class="font-bold text-slate-200 text-sm flex items-center gap-1.5">
+              <i data-lucide="trending-up" class="w-4 h-4 text-emerald-400"></i>
+              <span>Debi Zaman Serisi Hidrografı (AGİ + SWOT + Hibrit ML)</span>
+            </h2>
+            <p class="text-[11px] text-slate-400">
+              NASA SWOT döngüsel (11-21 gün) geçişlerinin meteorolojik ML ile kesintisiz hidrografa dönüştürülmesi
+            </p>
+          </div>
+          <div class="flex items-center space-x-2 text-[10px]">
+            <span class="inline-flex items-center gap-1 text-sky-400"><span class="w-3 h-0.5 bg-sky-400"></span> AGİ Debi</span>
+            <span class="inline-flex items-center gap-1 text-emerald-400"><span class="w-3 h-0.5 bg-emerald-400 border-dashed"></span> ML Sürekli</span>
+            <span class="inline-flex items-center gap-1 text-amber-400"><span>◆</span> SWOT L4</span>
+          </div>
+        </div>
+
+        <!-- Plotly Hydrograph Container -->
+        <div class="w-full h-[380px] mt-2">
+          <div id="hydrograph-chart" class="w-full h-full"></div>
+        </div>
+      </div>
+
+      <!-- PANEL 2 (PART 2): MEMBADAN MANSABA RIDGELINE (BOYUNA PROFİL) -->
+      <div class="bg-slate-900 border border-slate-800 rounded-xl p-4 shadow-lg flex flex-col">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800 pb-3">
+          <div>
+            <h2 class="font-bold text-slate-200 text-sm flex items-center gap-1.5">
+              <i data-lucide="git-commit" class="w-4 h-4 text-cyan-400"></i>
+              <span>Membadan Mansaba Sırt Çizgisi (Longitudinal Ridgeline) Profili</span>
+            </h2>
+            <p class="text-[11px] text-slate-400">
+              Bulgaristan sınırından Ege Denizi döküm noktasına (Enez) kadar akım ve kot sürekliliği
+            </p>
+          </div>
+
+          <!-- River selection tabs for Ridgeline -->
+          <div class="flex items-center space-x-1 bg-slate-800 p-1 rounded-lg text-xs">
+            <button data-river="Meriç" class="river-tab-btn active-tab px-3 py-1 rounded-md font-semibold text-sky-400 bg-slate-900">Meriç</button>
+            <button data-river="Tunca" class="river-tab-btn px-3 py-1 rounded-md font-semibold text-slate-400 hover:text-slate-200">Tunca</button>
+            <button data-river="Arda" class="river-tab-btn px-3 py-1 rounded-md font-semibold text-slate-400 hover:text-slate-200">Arda</button>
+          </div>
+        </div>
+
+        <!-- Plotly Ridgeline Container -->
+        <div class="w-full h-[260px] mt-2">
+          <div id="ridgeline-chart" class="w-full h-full"></div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900/80 border-t border-slate-800 px-4 py-3 text-center text-xs text-slate-500">
+    <div class="max-w-[1720px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div>
+        Meriç-Tunca-Arda Sınıraşan Havzaları SWOT Nehir Akım ve Taşkın Erken Uyarı Platformu | NASA/CNES SWOT &amp; DSİ 11. Bölge
+      </div>
+      <div class="flex items-center space-x-3 text-[11px]">
+        <span>Metodoloji: Kızılırmak SWOT Akım Analizi</span>
+        <span>•</span>
+        <span>Backend: FastAPI / Python 3.11+</span>
+        <span>•</span>
+        <span>ML: Random Forest / LightGBM Regressor</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Initialize lucide icons -->
+  <script>
+    lucide.createIcons();
+  </script>
+  <!-- Application JS -->
+  <script src="/static/js/app.js"></script>
+</body>
+</html>

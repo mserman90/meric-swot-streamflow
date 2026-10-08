@@ -1,0 +1,97 @@
+[
+  {
+    "station_id": "D01A001",
+    "station_name": "Kirişhane AGİ",
+    "river": "Meriç",
+    "basin": "Meriç-Ergene",
+    "lat": 41.6580,
+    "lon": 26.5560,
+    "altitude_m": 30.45,
+    "datum_offset_m": 6.85,
+    "thresholds": {
+      "normal_max_m3s": 500.0,
+      "warning_m3s": 750.0,
+      "alarm_m3s": 1000.0,
+      "flood_m3s": 1300.0
+    },
+    "critical_stage_m": 5.80,
+    "lead_time_from_upstream_hrs": 14.0,
+    "description": "Edirne şehir merkezinde Arda ve Tunca mansabı ana kontrol istasyonu. Meriç köprüsü civarı."
+  },
+  {
+    "station_id": "D01A003",
+    "station_name": "İpsala AGİ",
+    "river": "Meriç",
+    "basin": "Aşağı Meriç",
+    "lat": 40.9150,
+    "lon": 26.3780,
+    "altitude_m": 12.10,
+    "datum_offset_m": 6.40,
+    "thresholds": {
+      "normal_max_m3s": 800.0,
+      "warning_m3s": 1100.0,
+      "alarm_m3s": 1450.0,
+      "flood_m3s": 1800.0
+    },
+    "critical_stage_m": 4.50,
+    "lead_time_from_upstream_hrs": 26.0,
+    "description": "Aşağı Meriç delta havzası ve İpsala çeltik ovaları koruma kontrol kesiti."
+  },
+  {
+    "station_id": "D01A005",
+    "station_name": "Suakacağı AGİ",
+    "river": "Tunca",
+    "basin": "Tunca Sınır",
+    "lat": 41.7820,
+    "lon": 26.5680,
+    "altitude_m": 48.20,
+    "datum_offset_m": 7.15,
+    "thresholds": {
+      "normal_max_m3s": 15.0,
+      "warning_m3s": 22.0,
+      "alarm_m3s": 35.0,
+      "flood_m3s": 55.0
+    },
+    "critical_stage_m": 2.90,
+    "lead_time_from_upstream_hrs": 8.0,
+    "description": "Bulgaristan sınır girişi Tunca nehri ilk karşılama istasyonu."
+  },
+  {
+    "station_id": "D01A006",
+    "station_name": "Değirmenyeni AGİ",
+    "river": "Tunca",
+    "basin": "Tunca Edirne",
+    "lat": 41.7100,
+    "lon": 26.5750,
+    "altitude_m": 38.60,
+    "datum_offset_m": 7.00,
+    "thresholds": {
+      "normal_max_m3s": 20.0,
+      "warning_m3s": 28.0,
+      "alarm_m3s": 45.0,
+      "flood_m3s": 70.0
+    },
+    "critical_stage_m": 3.20,
+    "lead_time_from_upstream_hrs": 12.0,
+    "description": "Edirne Sarayiçi taşkın alanı ve Kırkpınar er meydanı üst koruma noktası."
+  },
+  {
+    "station_id": "D01A008",
+    "station_name": "Arda Köprüsü AGİ",
+    "river": "Arda",
+    "basin": "Arda",
+    "lat": 41.6590,
+    "lon": 26.5180,
+    "altitude_m": 34.80,
+    "datum_offset_m": 6.95,
+    "thresholds": {
+      "normal_max_m3s": 350.0,
+      "warning_m3s": 450.0,
+      "alarm_m3s": 700.0,
+      "flood_m3s": 950.0
+    },
+    "critical_stage_m": 4.90,
+    "lead_time_from_upstream_hrs": 7.5,
+    "description": "Ivaylovgrad baraj kapakları açıldığında Edirne'ye ilk gelen hızlı debi dalgasını ölçen istasyon."
+  }
+]

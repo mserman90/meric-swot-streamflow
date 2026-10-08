@@ -1,0 +1,285 @@
+[
+  {
+    "reach_id": "23214000101",
+    "river_name": "Meriç",
+    "section_name": "Svilengrad - Kapıkule Memba",
+    "country": "Bulgaristan - Türkiye Sınırı",
+    "reach_length_km": 14.2,
+    "dist_from_sea_km": 218.0,
+    "mean_width_m": 115.0,
+    "mean_slope": 0.00035,
+    "wse_ref": 48.6,
+    "dsi_nearest_station_id": "D01A001",
+    "coordinates": [
+      [41.765, 26.182],
+      [41.751, 26.241],
+      [41.734, 26.312],
+      [41.718, 26.380],
+      [41.702, 26.435]
+    ],
+    "nodes": [
+      {"node_id": "2321400010101", "lat": 41.765, "lon": 26.182, "dist_km": 218.0},
+      {"node_id": "2321400010102", "lat": 41.734, "lon": 26.312, "dist_km": 211.0},
+      {"node_id": "2321400010103", "lat": 41.702, "lon": 26.435, "dist_km": 204.0}
+    ]
+  },
+  {
+    "reach_id": "23214000111",
+    "river_name": "Meriç",
+    "section_name": "Kapıkule - Karaağaç",
+    "country": "Türkiye",
+    "reach_length_km": 12.8,
+    "dist_from_sea_km": 204.0,
+    "mean_width_m": 128.0,
+    "mean_slope": 0.00032,
+    "wse_ref": 43.8,
+    "dsi_nearest_station_id": "D01A001",
+    "coordinates": [
+      [41.702, 26.435],
+      [41.688, 26.480],
+      [41.674, 26.518],
+      [41.662, 26.545]
+    ],
+    "nodes": [
+      {"node_id": "2321400011101", "lat": 41.702, "lon": 26.435, "dist_km": 204.0},
+      {"node_id": "2321400011102", "lat": 41.688, "lon": 26.480, "dist_km": 198.0},
+      {"node_id": "2321400011103", "lat": 41.662, "lon": 26.545, "dist_km": 191.0}
+    ]
+  },
+  {
+    "reach_id": "23214000121",
+    "river_name": "Meriç",
+    "section_name": "Edirne Merkez - Kirişhane AGİ (Arda Birleşimi Sonrası)",
+    "country": "Türkiye",
+    "reach_length_km": 9.6,
+    "dist_from_sea_km": 191.0,
+    "mean_width_m": 156.0,
+    "mean_slope": 0.00028,
+    "wse_ref": 39.5,
+    "dsi_nearest_station_id": "D01A001",
+    "coordinates": [
+      [41.662, 26.545],
+      [41.658, 26.556],
+      [41.650, 26.568],
+      [41.635, 26.582]
+    ],
+    "nodes": [
+      {"node_id": "2321400012101", "lat": 41.662, "lon": 26.545, "dist_km": 191.0},
+      {"node_id": "2321400012102", "lat": 41.658, "lon": 26.556, "dist_km": 187.0},
+      {"node_id": "2321400012103", "lat": 41.635, "lon": 26.582, "dist_km": 181.5}
+    ]
+  },
+  {
+    "reach_id": "23214000131",
+    "river_name": "Meriç",
+    "section_name": "Tunca Birleşimi - Söğütlük / Üyüklütatar",
+    "country": "Türkiye - Yunanistan Sınırı",
+    "reach_length_km": 18.4,
+    "dist_from_sea_km": 181.5,
+    "mean_width_m": 165.0,
+    "mean_slope": 0.00025,
+    "wse_ref": 34.2,
+    "dsi_nearest_station_id": "D01A001",
+    "coordinates": [
+      [41.635, 26.582],
+      [41.615, 26.602],
+      [41.582, 26.618],
+      [41.542, 26.634],
+      [41.505, 26.645]
+    ],
+    "nodes": [
+      {"node_id": "2321400013101", "lat": 41.635, "lon": 26.582, "dist_km": 181.5},
+      {"node_id": "2321400013102", "lat": 41.582, "lon": 26.618, "dist_km": 172.0},
+      {"node_id": "2321400013103", "lat": 41.505, "lon": 26.645, "dist_km": 163.0}
+    ]
+  },
+  {
+    "reach_id": "23214000141",
+    "river_name": "Meriç",
+    "section_name": "Uzunköprü - Saçlımüsellim",
+    "country": "Türkiye - Yunanistan Sınırı",
+    "reach_length_km": 36.5,
+    "dist_from_sea_km": 163.0,
+    "mean_width_m": 178.0,
+    "mean_slope": 0.00022,
+    "wse_ref": 24.8,
+    "dsi_nearest_station_id": "D01A003",
+    "coordinates": [
+      [41.505, 26.645],
+      [41.442, 26.658],
+      [41.378, 26.672],
+      [41.312, 26.635],
+      [41.240, 26.582],
+      [41.155, 26.502]
+    ],
+    "nodes": [
+      {"node_id": "2321400014101", "lat": 41.505, "lon": 26.645, "dist_km": 163.0},
+      {"node_id": "2321400014102", "lat": 41.378, "lon": 26.672, "dist_km": 145.0},
+      {"node_id": "2321400014103", "lat": 41.155, "lon": 26.502, "dist_km": 126.5}
+    ]
+  },
+  {
+    "reach_id": "23214000151",
+    "river_name": "Meriç",
+    "section_name": "İpsala Ovası & İpsala AGİ",
+    "country": "Türkiye - Yunanistan Sınırı",
+    "reach_length_km": 38.0,
+    "dist_from_sea_km": 126.5,
+    "mean_width_m": 195.0,
+    "mean_slope": 0.00016,
+    "wse_ref": 14.1,
+    "dsi_nearest_station_id": "D01A003",
+    "coordinates": [
+      [41.155, 26.502],
+      [41.062, 26.445],
+      [40.985, 26.402],
+      [40.915, 26.378],
+      [40.852, 26.324]
+    ],
+    "nodes": [
+      {"node_id": "2321400015101", "lat": 41.155, "lon": 26.502, "dist_km": 126.5},
+      {"node_id": "2321400015102", "lat": 40.915, "lon": 26.378, "dist_km": 105.0},
+      {"node_id": "2321400015103", "lat": 40.852, "lon": 26.324, "dist_km": 88.5}
+    ]
+  },
+  {
+    "reach_id": "23214000161",
+    "river_name": "Meriç",
+    "section_name": "Enez Deltası & Ege Denizi Döküm Noktası",
+    "country": "Türkiye - Yunanistan Sınırı",
+    "reach_length_km": 32.0,
+    "dist_from_sea_km": 88.5,
+    "mean_width_m": 220.0,
+    "mean_slope": 0.00010,
+    "wse_ref": 4.5,
+    "dsi_nearest_station_id": "D01A003",
+    "coordinates": [
+      [40.852, 26.324],
+      [40.795, 26.250],
+      [40.758, 26.172],
+      [40.735, 26.095],
+      [40.718, 26.035]
+    ],
+    "nodes": [
+      {"node_id": "2321400016101", "lat": 40.852, "lon": 26.324, "dist_km": 88.5},
+      {"node_id": "2321400016102", "lat": 40.758, "lon": 26.172, "dist_km": 45.0},
+      {"node_id": "2321400016103", "lat": 40.718, "lon": 26.035, "dist_km": 0.0}
+    ]
+  },
+  {
+    "reach_id": "23214100011",
+    "river_name": "Tunca",
+    "section_name": "Elhovo - Bulgaristan Memba Sınırı",
+    "country": "Bulgaristan",
+    "reach_length_km": 28.0,
+    "dist_from_sea_km": 242.0,
+    "mean_width_m": 48.0,
+    "mean_slope": 0.00052,
+    "wse_ref": 68.4,
+    "dsi_nearest_station_id": "D01A005",
+    "coordinates": [
+      [42.175, 26.565],
+      [42.062, 26.570],
+      [41.945, 26.568],
+      [41.848, 26.572]
+    ],
+    "nodes": [
+      {"node_id": "2321410001101", "lat": 42.175, "lon": 26.565, "dist_km": 242.0},
+      {"node_id": "2321410001102", "lat": 41.945, "lon": 26.568, "dist_km": 225.0},
+      {"node_id": "2321410001103", "lat": 41.848, "lon": 26.572, "dist_km": 214.0}
+    ]
+  },
+  {
+    "reach_id": "23214100021",
+    "river_name": "Tunca",
+    "section_name": "Suakacağı AGİ - Sınır Girişi",
+    "country": "Türkiye",
+    "reach_length_km": 14.5,
+    "dist_from_sea_km": 214.0,
+    "mean_width_m": 58.0,
+    "mean_slope": 0.00045,
+    "wse_ref": 52.1,
+    "dsi_nearest_station_id": "D01A005",
+    "coordinates": [
+      [41.848, 26.572],
+      [41.782, 26.568],
+      [41.750, 26.575],
+      [41.725, 26.580]
+    ],
+    "nodes": [
+      {"node_id": "2321410002101", "lat": 41.848, "lon": 26.572, "dist_km": 214.0},
+      {"node_id": "2321410002102", "lat": 41.782, "lon": 26.568, "dist_km": 206.0},
+      {"node_id": "2321410002103", "lat": 41.725, "lon": 26.580, "dist_km": 199.5}
+    ]
+  },
+  {
+    "reach_id": "23214100031",
+    "river_name": "Tunca",
+    "section_name": "Değirmenyeni AGİ - Edirne Sarayiçi & Meriç Birleşimi",
+    "country": "Türkiye",
+    "reach_length_km": 11.2,
+    "dist_from_sea_km": 199.5,
+    "mean_width_m": 64.0,
+    "mean_slope": 0.00038,
+    "wse_ref": 41.2,
+    "dsi_nearest_station_id": "D01A006",
+    "coordinates": [
+      [41.725, 26.580],
+      [41.710, 26.575],
+      [41.685, 26.562],
+      [41.662, 26.565],
+      [41.642, 26.586]
+    ],
+    "nodes": [
+      {"node_id": "2321410003101", "lat": 41.725, "lon": 26.580, "dist_km": 199.5},
+      {"node_id": "2321410003102", "lat": 41.710, "lon": 26.575, "dist_km": 194.0},
+      {"node_id": "2321410003103", "lat": 41.642, "lon": 26.586, "dist_km": 188.3}
+    ]
+  },
+  {
+    "reach_id": "23214200011",
+    "river_name": "Arda",
+    "section_name": "Ivaylovgrad Baraj Mansabı - Sınır Geçişi",
+    "country": "Bulgaristan - Yunanistan",
+    "reach_length_km": 24.6,
+    "dist_from_sea_km": 232.0,
+    "mean_width_m": 110.0,
+    "mean_slope": 0.00065,
+    "wse_ref": 62.8,
+    "dsi_nearest_station_id": "D01A008",
+    "coordinates": [
+      [41.595, 26.120],
+      [41.615, 26.220],
+      [41.632, 26.315],
+      [41.645, 26.410]
+    ],
+    "nodes": [
+      {"node_id": "2321420001101", "lat": 41.595, "lon": 26.120, "dist_km": 232.0},
+      {"node_id": "2321420001102", "lat": 41.632, "lon": 26.315, "dist_km": 218.0},
+      {"node_id": "2321420001103", "lat": 41.645, "lon": 26.410, "dist_km": 207.4}
+    ]
+  },
+  {
+    "reach_id": "23214200021",
+    "river_name": "Arda",
+    "section_name": "Kastanies - Arda Köprüsü AGİ & Meriç Kavşağı",
+    "country": "Yunanistan - Türkiye",
+    "reach_length_km": 16.4,
+    "dist_from_sea_km": 207.4,
+    "mean_width_m": 135.0,
+    "mean_slope": 0.00042,
+    "wse_ref": 42.6,
+    "dsi_nearest_station_id": "D01A008",
+    "coordinates": [
+      [41.645, 26.410],
+      [41.652, 26.468],
+      [41.659, 26.518],
+      [41.662, 26.545]
+    ],
+    "nodes": [
+      {"node_id": "2321420002101", "lat": 41.645, "lon": 26.410, "dist_km": 207.4},
+      {"node_id": "2321420002102", "lat": 41.659, "lon": 26.518, "dist_km": 196.0},
+      {"node_id": "2321420002103", "lat": 41.662, "lon": 26.545, "dist_km": 191.0}
+    ]
+  }
+]
