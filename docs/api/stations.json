@@ -1,0 +1,117 @@
+[
+  {
+    "station_id": "D01A001",
+    "station_name": "Kirişhane AGİ",
+    "river": "Meriç",
+    "date": "2026-10-07",
+    "timestamp": "2026-10-07T12:00:00Z",
+    "discharge_m3s": 292.89,
+    "stage_m": 3.43,
+    "wse_local_m": 33.88,
+    "wse_wgs84_m": 40.73,
+    "precipitation_mm": 0.0,
+    "status": "NORMAL",
+    "thresholds": {
+      "normal_max_m3s": 500.0,
+      "warning_m3s": 750.0,
+      "alarm_m3s": 1000.0,
+      "flood_m3s": 1300.0
+    },
+    "critical_stage_m": 5.8,
+    "lead_time_from_upstream_hrs": 14.0,
+    "is_live_telemetry": false,
+    "source": "DSİ Hidroloji Modeli"
+  },
+  {
+    "station_id": "D01A003",
+    "station_name": "İpsala AGİ",
+    "river": "Meriç",
+    "date": "2026-10-07",
+    "timestamp": "2026-10-07T12:00:00Z",
+    "discharge_m3s": 365.14,
+    "stage_m": 3.6,
+    "wse_local_m": 15.7,
+    "wse_wgs84_m": 22.1,
+    "precipitation_mm": 0.0,
+    "status": "NORMAL",
+    "thresholds": {
+      "normal_max_m3s": 800.0,
+      "warning_m3s": 1100.0,
+      "alarm_m3s": 1450.0,
+      "flood_m3s": 1800.0
+    },
+    "critical_stage_m": 4.5,
+    "lead_time_from_upstream_hrs": 26.0,
+    "is_live_telemetry": false,
+    "source": "DSİ Hidroloji Modeli"
+  },
+  {
+    "station_id": "D01A005",
+    "station_name": "Suakacağı AGİ",
+    "river": "Tunca",
+    "date": "2026-10-07",
+    "timestamp": "2026-10-07T12:00:00Z",
+    "discharge_m3s": 30.91,
+    "stage_m": 1.67,
+    "wse_local_m": 49.87,
+    "wse_wgs84_m": 57.02,
+    "precipitation_mm": 0.0,
+    "status": "WARNING",
+    "thresholds": {
+      "normal_max_m3s": 15.0,
+      "warning_m3s": 22.0,
+      "alarm_m3s": 35.0,
+      "flood_m3s": 55.0
+    },
+    "critical_stage_m": 2.9,
+    "lead_time_from_upstream_hrs": 8.0,
+    "is_live_telemetry": false,
+    "source": "DSİ Hidroloji Modeli"
+  },
+  {
+    "station_id": "D01A006",
+    "station_name": "Değirmenyeni AGİ",
+    "river": "Tunca",
+    "date": "2026-10-07",
+    "timestamp": "2026-10-07T12:00:00Z",
+    "discharge_m3s": 19.47,
+    "stage_m": 1.58,
+    "wse_local_m": 40.18,
+    "wse_wgs84_m": 47.18,
+    "precipitation_mm": 0.0,
+    "status": "NORMAL",
+    "thresholds": {
+      "normal_max_m3s": 20.0,
+      "warning_m3s": 28.0,
+      "alarm_m3s": 45.0,
+      "flood_m3s": 70.0
+    },
+    "critical_stage_m": 3.2,
+    "lead_time_from_upstream_hrs": 12.0,
+    "is_live_telemetry": false,
+    "source": "DSİ Hidroloji Modeli"
+  },
+  {
+    "station_id": "D01A008",
+    "station_name": "Arda Köprüsü AGİ",
+    "river": "Arda",
+    "date": "2026-10-07",
+    "timestamp": "2026-10-07T12:00:00Z",
+    "discharge_m3s": 151.21,
+    "stage_m": 2.73,
+    "wse_local_m": 37.53,
+    "wse_wgs84_m": 44.48,
+    "precipitation_mm": 0.0,
+    "status": "NORMAL",
+    "thresholds": {
+      "normal_max_m3s": 350.0,
+      "warning_m3s": 450.0,
+      "alarm_m3s": 700.0,
+      "flood_m3s": 950.0
+    },
+    "critical_stage_m": 4.9,
+    "lead_time_from_upstream_hrs": 7.5,
+    "is_live_telemetry": false,
+    "source": "DSİ Hidroloji Modeli"
+  }
+]

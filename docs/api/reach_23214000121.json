@@ -1,0 +1,75 @@
+{
+  "reach": {
+    "reach_id": "23214000121",
+    "river_name": "Meriç",
+    "section_name": "Edirne Merkez - Kirişhane AGİ (Arda Birleşimi Sonrası)",
+    "country": "Türkiye",
+    "reach_length_km": 9.6,
+    "dist_from_sea_km": 191.0,
+    "mean_width_m": 156.0,
+    "mean_slope": 0.00028,
+    "wse_ref": 39.5,
+    "dsi_nearest_station_id": "D01A001",
+    "coordinates": [
+      [
+        41.662,
+        26.545
+      ],
+      [
+        41.658,
+        26.556
+      ],
+      [
+        41.65,
+        26.568
+      ],
+      [
+        41.635,
+        26.582
+      ]
+    ],
+    "nodes": [
+      {
+        "node_id": "2321400012101",
+        "lat": 41.662,
+        "lon": 26.545,
+        "dist_km": 191.0
+      },
+      {
+        "node_id": "2321400012102",
+        "lat": 41.658,
+        "lon": 26.556,
+        "dist_km": 187.0
+      },
+      {
+        "node_id": "2321400012103",
+        "lat": 41.635,
+        "lon": 26.582,
+        "dist_km": 181.5
+      }
+    ]
+  },
+  "observations_count": 12,
+  "valid_observations_count": 10,
+  "qc_summary": {
+    "total": 12,
+    "accepted": 10,
+    "rejected_width": 0,
+    "rejected_flag": 2,
+    "rejected_u": 1,
+    "rejected_iqr": 0
+  },
+  "latest_observation": {
+    "reach_id": "23214000121",
+    "river_name": "Meriç",
+    "time_str": "2026-10-03T21:38:14Z",
+    "date": "2026-10-03",
+    "wse": 41.006,
+    "wse_u": 0.122,
+    "width": 160.9,
+    "slope": 0.000301,
+    "reach_q": 0,
+    "discharge": 265.66,
+    "source": "SWOT_KaRIn_L4_DAWG"
+  }
+}

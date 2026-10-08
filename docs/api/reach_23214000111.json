@@ -1,0 +1,75 @@
+{
+  "reach": {
+    "reach_id": "23214000111",
+    "river_name": "Meriç",
+    "section_name": "Kapıkule - Karaağaç",
+    "country": "Türkiye",
+    "reach_length_km": 12.8,
+    "dist_from_sea_km": 204.0,
+    "mean_width_m": 128.0,
+    "mean_slope": 0.00032,
+    "wse_ref": 43.8,
+    "dsi_nearest_station_id": "D01A001",
+    "coordinates": [
+      [
+        41.702,
+        26.435
+      ],
+      [
+        41.688,
+        26.48
+      ],
+      [
+        41.674,
+        26.518
+      ],
+      [
+        41.662,
+        26.545
+      ]
+    ],
+    "nodes": [
+      {
+        "node_id": "2321400011101",
+        "lat": 41.702,
+        "lon": 26.435,
+        "dist_km": 204.0
+      },
+      {
+        "node_id": "2321400011102",
+        "lat": 41.688,
+        "lon": 26.48,
+        "dist_km": 198.0
+      },
+      {
+        "node_id": "2321400011103",
+        "lat": 41.662,
+        "lon": 26.545,
+        "dist_km": 191.0
+      }
+    ]
+  },
+  "observations_count": 12,
+  "valid_observations_count": 11,
+  "qc_summary": {
+    "total": 12,
+    "accepted": 11,
+    "rejected_width": 0,
+    "rejected_flag": 1,
+    "rejected_u": 1,
+    "rejected_iqr": 0
+  },
+  "latest_observation": {
+    "reach_id": "23214000111",
+    "river_name": "Meriç",
+    "time_str": "2026-10-08T02:46:14Z",
+    "date": "2026-10-08",
+    "wse": 45.274,
+    "wse_u": 0.185,
+    "width": 133.1,
+    "slope": 0.000364,
+    "reach_q": 0,
+    "discharge": 277.33,
+    "source": "SWOT_KaRIn_L4_DAWG"
+  }
+}

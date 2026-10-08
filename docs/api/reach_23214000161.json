@@ -1,0 +1,79 @@
+{
+  "reach": {
+    "reach_id": "23214000161",
+    "river_name": "Meriç",
+    "section_name": "Enez Deltası & Ege Denizi Döküm Noktası",
+    "country": "Türkiye - Yunanistan Sınırı",
+    "reach_length_km": 32.0,
+    "dist_from_sea_km": 88.5,
+    "mean_width_m": 220.0,
+    "mean_slope": 0.0001,
+    "wse_ref": 4.5,
+    "dsi_nearest_station_id": "D01A003",
+    "coordinates": [
+      [
+        40.852,
+        26.324
+      ],
+      [
+        40.795,
+        26.25
+      ],
+      [
+        40.758,
+        26.172
+      ],
+      [
+        40.735,
+        26.095
+      ],
+      [
+        40.718,
+        26.035
+      ]
+    ],
+    "nodes": [
+      {
+        "node_id": "2321400016101",
+        "lat": 40.852,
+        "lon": 26.324,
+        "dist_km": 88.5
+      },
+      {
+        "node_id": "2321400016102",
+        "lat": 40.758,
+        "lon": 26.172,
+        "dist_km": 45.0
+      },
+      {
+        "node_id": "2321400016103",
+        "lat": 40.718,
+        "lon": 26.035,
+        "dist_km": 0.0
+      }
+    ]
+  },
+  "observations_count": 13,
+  "valid_observations_count": 10,
+  "qc_summary": {
+    "total": 13,
+    "accepted": 10,
+    "rejected_width": 0,
+    "rejected_flag": 3,
+    "rejected_u": 3,
+    "rejected_iqr": 0
+  },
+  "latest_observation": {
+    "reach_id": "23214000161",
+    "river_name": "Meriç",
+    "time_str": "2026-10-05T05:23:14Z",
+    "date": "2026-10-05",
+    "wse": 6.045,
+    "wse_u": 0.095,
+    "width": 228.9,
+    "slope": 0.000113,
+    "reach_q": 0,
+    "discharge": 289.12,
+    "source": "SWOT_KaRIn_L4_DAWG"
+  }
+}

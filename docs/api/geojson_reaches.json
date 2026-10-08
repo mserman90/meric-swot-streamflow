@@ -1,0 +1,465 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "reach_id": "23214000101",
+        "river_name": "Meriç",
+        "section_name": "Svilengrad - Kapıkule Memba",
+        "country": "Bulgaristan - Türkiye Sınırı",
+        "length_km": 14.2,
+        "width_m": 115.0,
+        "slope": 0.00035,
+        "wse_ref": 48.6,
+        "status": "warning",
+        "current_flow_m3s": 760.0
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            26.182,
+            41.765
+          ],
+          [
+            26.241,
+            41.751
+          ],
+          [
+            26.312,
+            41.734
+          ],
+          [
+            26.38,
+            41.718
+          ],
+          [
+            26.435,
+            41.702
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "reach_id": "23214000111",
+        "river_name": "Meriç",
+        "section_name": "Kapıkule - Karaağaç",
+        "country": "Türkiye",
+        "length_km": 12.8,
+        "width_m": 128.0,
+        "slope": 0.00032,
+        "wse_ref": 43.8,
+        "status": "warning",
+        "current_flow_m3s": 795.0
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            26.435,
+            41.702
+          ],
+          [
+            26.48,
+            41.688
+          ],
+          [
+            26.518,
+            41.674
+          ],
+          [
+            26.545,
+            41.662
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "reach_id": "23214000121",
+        "river_name": "Meriç",
+        "section_name": "Edirne Merkez - Kirişhane AGİ",
+        "country": "Türkiye",
+        "length_km": 9.6,
+        "width_m": 156.0,
+        "slope": 0.00028,
+        "wse_ref": 39.5,
+        "status": "danger",
+        "current_flow_m3s": 1380.0
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            26.545,
+            41.662
+          ],
+          [
+            26.556,
+            41.658
+          ],
+          [
+            26.568,
+            41.65
+          ],
+          [
+            26.582,
+            41.635
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "reach_id": "23214000131",
+        "river_name": "Meriç",
+        "section_name": "Tunca Birleşimi - Söğütlük",
+        "country": "Türkiye - Yunanistan Sınırı",
+        "length_km": 18.4,
+        "width_m": 165.0,
+        "slope": 0.00025,
+        "wse_ref": 34.2,
+        "status": "danger",
+        "current_flow_m3s": 1425.0
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            26.582,
+            41.635
+          ],
+          [
+            26.602,
+            41.615
+          ],
+          [
+            26.618,
+            41.582
+          ],
+          [
+            26.634,
+            41.542
+          ],
+          [
+            26.645,
+            41.505
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "reach_id": "23214000141",
+        "river_name": "Meriç",
+        "section_name": "Uzunköprü - Saçlımüsellim",
+        "country": "Türkiye - Yunanistan Sınırı",
+        "length_km": 36.5,
+        "width_m": 178.0,
+        "slope": 0.00022,
+        "wse_ref": 24.8,
+        "status": "warning",
+        "current_flow_m3s": 1280.0
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            26.645,
+            41.505
+          ],
+          [
+            26.658,
+            41.442
+          ],
+          [
+            26.672,
+            41.378
+          ],
+          [
+            26.635,
+            41.312
+          ],
+          [
+            26.582,
+            41.24
+          ],
+          [
+            26.502,
+            41.155
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "reach_id": "23214000151",
+        "river_name": "Meriç",
+        "section_name": "İpsala Ovası & İpsala AGİ",
+        "country": "Türkiye - Yunanistan Sınırı",
+        "length_km": 38.0,
+        "width_m": 195.0,
+        "slope": 0.00016,
+        "wse_ref": 14.1,
+        "status": "warning",
+        "current_flow_m3s": 1220.0
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            26.502,
+            41.155
+          ],
+          [
+            26.445,
+            41.062
+          ],
+          [
+            26.402,
+            40.985
+          ],
+          [
+            26.378,
+            40.915
+          ],
+          [
+            26.324,
+            40.852
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "reach_id": "23214000161",
+        "river_name": "Meriç",
+        "section_name": "Enez Deltası & Ege Denizi",
+        "country": "Türkiye - Yunanistan Sınırı",
+        "length_km": 32.0,
+        "width_m": 220.0,
+        "slope": 0.0001,
+        "wse_ref": 4.5,
+        "status": "normal",
+        "current_flow_m3s": 1150.0
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            26.324,
+            40.852
+          ],
+          [
+            26.25,
+            40.795
+          ],
+          [
+            26.172,
+            40.758
+          ],
+          [
+            26.095,
+            40.735
+          ],
+          [
+            26.035,
+            40.718
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "reach_id": "23214100011",
+        "river_name": "Tunca",
+        "section_name": "Elhovo - Bulgaristan Memba",
+        "country": "Bulgaristan",
+        "length_km": 28.0,
+        "width_m": 48.0,
+        "slope": 0.00052,
+        "wse_ref": 68.4,
+        "status": "warning",
+        "current_flow_m3s": 24.5
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            26.565,
+            42.175
+          ],
+          [
+            26.57,
+            42.062
+          ],
+          [
+            26.568,
+            41.945
+          ],
+          [
+            26.572,
+            41.848
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "reach_id": "23214100021",
+        "river_name": "Tunca",
+        "section_name": "Suakacağı AGİ - Sınır Girişi",
+        "country": "Türkiye",
+        "length_km": 14.5,
+        "width_m": 58.0,
+        "slope": 0.00045,
+        "wse_ref": 52.1,
+        "status": "danger",
+        "current_flow_m3s": 42.0
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            26.572,
+            41.848
+          ],
+          [
+            26.568,
+            41.782
+          ],
+          [
+            26.575,
+            41.75
+          ],
+          [
+            26.58,
+            41.725
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "reach_id": "23214100031",
+        "river_name": "Tunca",
+        "section_name": "Değirmenyeni AGİ - Edirne Sarayiçi",
+        "country": "Türkiye",
+        "length_km": 11.2,
+        "width_m": 64.0,
+        "slope": 0.00038,
+        "wse_ref": 41.2,
+        "status": "danger",
+        "current_flow_m3s": 48.2
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            26.58,
+            41.725
+          ],
+          [
+            26.575,
+            41.71
+          ],
+          [
+            26.562,
+            41.685
+          ],
+          [
+            26.565,
+            41.662
+          ],
+          [
+            26.586,
+            41.642
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "reach_id": "23214200011",
+        "river_name": "Arda",
+        "section_name": "Ivaylovgrad Baraj Mansabı",
+        "country": "Bulgaristan - Yunanistan",
+        "length_km": 24.6,
+        "width_m": 110.0,
+        "slope": 0.00065,
+        "wse_ref": 62.8,
+        "status": "danger",
+        "current_flow_m3s": 610.0
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            26.12,
+            41.595
+          ],
+          [
+            26.22,
+            41.615
+          ],
+          [
+            26.315,
+            41.632
+          ],
+          [
+            26.41,
+            41.645
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "reach_id": "23214200021",
+        "river_name": "Arda",
+        "section_name": "Arda Köprüsü AGİ & Meriç Birleşimi",
+        "country": "Yunanistan - Türkiye",
+        "length_km": 16.4,
+        "width_m": 135.0,
+        "slope": 0.00042,
+        "wse_ref": 42.6,
+        "status": "danger",
+        "current_flow_m3s": 595.0
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            26.41,
+            41.645
+          ],
+          [
+            26.468,
+            41.652
+          ],
+          [
+            26.518,
+            41.659
+          ],
+          [
+            26.545,
+            41.662
+          ]
+        ]
+      }
+    }
+  ]
+}

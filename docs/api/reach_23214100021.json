@@ -1,0 +1,75 @@
+{
+  "reach": {
+    "reach_id": "23214100021",
+    "river_name": "Tunca",
+    "section_name": "Suakacağı AGİ - Sınır Girişi",
+    "country": "Türkiye",
+    "reach_length_km": 14.5,
+    "dist_from_sea_km": 214.0,
+    "mean_width_m": 58.0,
+    "mean_slope": 0.00045,
+    "wse_ref": 52.1,
+    "dsi_nearest_station_id": "D01A005",
+    "coordinates": [
+      [
+        41.848,
+        26.572
+      ],
+      [
+        41.782,
+        26.568
+      ],
+      [
+        41.75,
+        26.575
+      ],
+      [
+        41.725,
+        26.58
+      ]
+    ],
+    "nodes": [
+      {
+        "node_id": "2321410002101",
+        "lat": 41.848,
+        "lon": 26.572,
+        "dist_km": 214.0
+      },
+      {
+        "node_id": "2321410002102",
+        "lat": 41.782,
+        "lon": 26.568,
+        "dist_km": 206.0
+      },
+      {
+        "node_id": "2321410002103",
+        "lat": 41.725,
+        "lon": 26.58,
+        "dist_km": 199.5
+      }
+    ]
+  },
+  "observations_count": 11,
+  "valid_observations_count": 10,
+  "qc_summary": {
+    "total": 11,
+    "accepted": 10,
+    "rejected_width": 0,
+    "rejected_flag": 1,
+    "rejected_u": 1,
+    "rejected_iqr": 0
+  },
+  "latest_observation": {
+    "reach_id": "23214100021",
+    "river_name": "Tunca",
+    "time_str": "2026-10-03T00:18:13Z",
+    "date": "2026-10-03",
+    "wse": 52.474,
+    "wse_u": 1.662,
+    "width": 61.2,
+    "slope": 0.00049,
+    "reach_q": 2,
+    "discharge": 17.78,
+    "source": "SWOT_KaRIn_L4_DAWG"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "reach": {
+    "reach_id": "23214000151",
+    "river_name": "Meriç",
+    "section_name": "İpsala Ovası & İpsala AGİ",
+    "country": "Türkiye - Yunanistan Sınırı",
+    "reach_length_km": 38.0,
+    "dist_from_sea_km": 126.5,
+    "mean_width_m": 195.0,
+    "mean_slope": 0.00016,
+    "wse_ref": 14.1,
+    "dsi_nearest_station_id": "D01A003",
+    "coordinates": [
+      [
+        41.155,
+        26.502
+      ],
+      [
+        41.062,
+        26.445
+      ],
+      [
+        40.985,
+        26.402
+      ],
+      [
+        40.915,
+        26.378
+      ],
+      [
+        40.852,
+        26.324
+      ]
+    ],
+    "nodes": [
+      {
+        "node_id": "2321400015101",
+        "lat": 41.155,
+        "lon": 26.502,
+        "dist_km": 126.5
+      },
+      {
+        "node_id": "2321400015102",
+        "lat": 40.915,
+        "lon": 26.378,
+        "dist_km": 105.0
+      },
+      {
+        "node_id": "2321400015103",
+        "lat": 40.852,
+        "lon": 26.324,
+        "dist_km": 88.5
+      }
+    ]
+  },
+  "observations_count": 12,
+  "valid_observations_count": 11,
+  "qc_summary": {
+    "total": 12,
+    "accepted": 11,
+    "rejected_width": 0,
+    "rejected_flag": 1,
+    "rejected_u": 1,
+    "rejected_iqr": 0
+  },
+  "latest_observation": {
+    "reach_id": "23214000151",
+    "river_name": "Meriç",
+    "time_str": "2026-09-30T01:31:14Z",
+    "date": "2026-09-30",
+    "wse": 15.598,
+    "wse_u": 0.254,
+    "width": 202.2,
+    "slope": 0.000162,
+    "reach_q": 0,
+    "discharge": 280.55,
+    "source": "SWOT_KaRIn_L4_DAWG"
+  }
+}

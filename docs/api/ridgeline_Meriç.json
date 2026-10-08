@@ -1,0 +1,89 @@
+{
+  "river": "Meriç",
+  "profile": [
+    {
+      "reach_id": "23214000101",
+      "section_name": "Svilengrad - Kapıkule Memba",
+      "dist_from_sea_km": 218.0,
+      "reach_length_km": 14.2,
+      "wse_ref": 48.6,
+      "latest_wse": 50.129,
+      "latest_discharge_m3s": 273.42,
+      "width_m": 118.8,
+      "slope": 0.00035,
+      "country": "Bulgaristan - Türkiye Sınırı"
+    },
+    {
+      "reach_id": "23214000111",
+      "section_name": "Kapıkule - Karaağaç",
+      "dist_from_sea_km": 204.0,
+      "reach_length_km": 12.8,
+      "wse_ref": 43.8,
+      "latest_wse": 45.274,
+      "latest_discharge_m3s": 277.33,
+      "width_m": 133.1,
+      "slope": 0.00032,
+      "country": "Türkiye"
+    },
+    {
+      "reach_id": "23214000121",
+      "section_name": "Edirne Merkez - Kirişhane AGİ (Arda Birleşimi Sonrası)",
+      "dist_from_sea_km": 191.0,
+      "reach_length_km": 9.6,
+      "wse_ref": 39.5,
+      "latest_wse": 41.006,
+      "latest_discharge_m3s": 265.66,
+      "width_m": 160.9,
+      "slope": 0.00028,
+      "country": "Türkiye"
+    },
+    {
+      "reach_id": "23214000131",
+      "section_name": "Tunca Birleşimi - Söğütlük / Üyüklütatar",
+      "dist_from_sea_km": 181.5,
+      "reach_length_km": 18.4,
+      "wse_ref": 34.2,
+      "latest_wse": 35.775,
+      "latest_discharge_m3s": 293.44,
+      "width_m": 172.1,
+      "slope": 0.00025,
+      "country": "Türkiye - Yunanistan Sınırı"
+    },
+    {
+      "reach_id": "23214000141",
+      "section_name": "Uzunköprü - Saçlımüsellim",
+      "dist_from_sea_km": 163.0,
+      "reach_length_km": 36.5,
+      "wse_ref": 24.8,
+      "latest_wse": 26.357,
+      "latest_discharge_m3s": 270.14,
+      "width_m": 186.5,
+      "slope": 0.00022,
+      "country": "Türkiye - Yunanistan Sınırı"
+    },
+    {
+      "reach_id": "23214000151",
+      "section_name": "İpsala Ovası & İpsala AGİ",
+      "dist_from_sea_km": 126.5,
+      "reach_length_km": 38.0,
+      "wse_ref": 14.1,
+      "latest_wse": 15.598,
+      "latest_discharge_m3s": 280.55,
+      "width_m": 202.2,
+      "slope": 0.00016,
+      "country": "Türkiye - Yunanistan Sınırı"
+    },
+    {
+      "reach_id": "23214000161",
+      "section_name": "Enez Deltası & Ege Denizi Döküm Noktası",
+      "dist_from_sea_km": 88.5,
+      "reach_length_km": 32.0,
+      "wse_ref": 4.5,
+      "latest_wse": 6.045,
+      "latest_discharge_m3s": 289.12,
+      "width_m": 228.9,
+      "slope": 0.0001,
+      "country": "Türkiye - Yunanistan Sınırı"
+    }
+  ]
+}

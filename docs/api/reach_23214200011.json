@@ -1,0 +1,75 @@
+{
+  "reach": {
+    "reach_id": "23214200011",
+    "river_name": "Arda",
+    "section_name": "Ivaylovgrad Baraj Mansabı - Sınır Geçişi",
+    "country": "Bulgaristan - Yunanistan",
+    "reach_length_km": 24.6,
+    "dist_from_sea_km": 232.0,
+    "mean_width_m": 110.0,
+    "mean_slope": 0.00065,
+    "wse_ref": 62.8,
+    "dsi_nearest_station_id": "D01A008",
+    "coordinates": [
+      [
+        41.595,
+        26.12
+      ],
+      [
+        41.615,
+        26.22
+      ],
+      [
+        41.632,
+        26.315
+      ],
+      [
+        41.645,
+        26.41
+      ]
+    ],
+    "nodes": [
+      {
+        "node_id": "2321420001101",
+        "lat": 41.595,
+        "lon": 26.12,
+        "dist_km": 232.0
+      },
+      {
+        "node_id": "2321420001102",
+        "lat": 41.632,
+        "lon": 26.315,
+        "dist_km": 218.0
+      },
+      {
+        "node_id": "2321420001103",
+        "lat": 41.645,
+        "lon": 26.41,
+        "dist_km": 207.4
+      }
+    ]
+  },
+  "observations_count": 13,
+  "valid_observations_count": 13,
+  "qc_summary": {
+    "total": 13,
+    "accepted": 13,
+    "rejected_width": 0,
+    "rejected_flag": 0,
+    "rejected_u": 0,
+    "rejected_iqr": 0
+  },
+  "latest_observation": {
+    "reach_id": "23214200011",
+    "river_name": "Arda",
+    "time_str": "2026-10-06T04:02:14Z",
+    "date": "2026-10-06",
+    "wse": 63.807,
+    "wse_u": 0.245,
+    "width": 115.2,
+    "slope": 0.000638,
+    "reach_q": 0,
+    "discharge": 128.67,
+    "source": "SWOT_KaRIn_L4_DAWG"
+  }
+}

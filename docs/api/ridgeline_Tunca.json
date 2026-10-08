@@ -1,0 +1,41 @@
+{
+  "river": "Tunca",
+  "profile": [
+    {
+      "reach_id": "23214100011",
+      "section_name": "Elhovo - Bulgaristan Memba Sınırı",
+      "dist_from_sea_km": 242.0,
+      "reach_length_km": 28.0,
+      "wse_ref": 68.4,
+      "latest_wse": 68.939,
+      "latest_discharge_m3s": 23.42,
+      "width_m": 52.1,
+      "slope": 0.00052,
+      "country": "Bulgaristan"
+    },
+    {
+      "reach_id": "23214100021",
+      "section_name": "Suakacağı AGİ - Sınır Girişi",
+      "dist_from_sea_km": 214.0,
+      "reach_length_km": 14.5,
+      "wse_ref": 52.1,
+      "latest_wse": 52.474,
+      "latest_discharge_m3s": 17.78,
+      "width_m": 61.2,
+      "slope": 0.00045,
+      "country": "Türkiye"
+    },
+    {
+      "reach_id": "23214100031",
+      "section_name": "Değirmenyeni AGİ - Edirne Sarayiçi & Meriç Birleşimi",
+      "dist_from_sea_km": 199.5,
+      "reach_length_km": 11.2,
+      "wse_ref": 41.2,
+      "latest_wse": 41.657,
+      "latest_discharge_m3s": 27.52,
+      "width_m": 66.7,
+      "slope": 0.00038,
+      "country": "Türkiye"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "reach": {
+    "reach_id": "23214000131",
+    "river_name": "Meriç",
+    "section_name": "Tunca Birleşimi - Söğütlük / Üyüklütatar",
+    "country": "Türkiye - Yunanistan Sınırı",
+    "reach_length_km": 18.4,
+    "dist_from_sea_km": 181.5,
+    "mean_width_m": 165.0,
+    "mean_slope": 0.00025,
+    "wse_ref": 34.2,
+    "dsi_nearest_station_id": "D01A001",
+    "coordinates": [
+      [
+        41.635,
+        26.582
+      ],
+      [
+        41.615,
+        26.602
+      ],
+      [
+        41.582,
+        26.618
+      ],
+      [
+        41.542,
+        26.634
+      ],
+      [
+        41.505,
+        26.645
+      ]
+    ],
+    "nodes": [
+      {
+        "node_id": "2321400013101",
+        "lat": 41.635,
+        "lon": 26.582,
+        "dist_km": 181.5
+      },
+      {
+        "node_id": "2321400013102",
+        "lat": 41.582,
+        "lon": 26.618,
+        "dist_km": 172.0
+      },
+      {
+        "node_id": "2321400013103",
+        "lat": 41.505,
+        "lon": 26.645,
+        "dist_km": 163.0
+      }
+    ]
+  },
+  "observations_count": 11,
+  "valid_observations_count": 11,
+  "qc_summary": {
+    "total": 11,
+    "accepted": 11,
+    "rejected_width": 0,
+    "rejected_flag": 0,
+    "rejected_u": 0,
+    "rejected_iqr": 0
+  },
+  "latest_observation": {
+    "reach_id": "23214000131",
+    "river_name": "Meriç",
+    "time_str": "2026-10-05T03:13:14Z",
+    "date": "2026-10-05",
+    "wse": 35.775,
+    "wse_u": 0.335,
+    "width": 172.1,
+    "slope": 0.00025,
+    "reach_q": 0,
+    "discharge": 293.44,
+    "source": "SWOT_KaRIn_L4_DAWG"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "reach": {
+    "reach_id": "23214000101",
+    "river_name": "Meriç",
+    "section_name": "Svilengrad - Kapıkule Memba",
+    "country": "Bulgaristan - Türkiye Sınırı",
+    "reach_length_km": 14.2,
+    "dist_from_sea_km": 218.0,
+    "mean_width_m": 115.0,
+    "mean_slope": 0.00035,
+    "wse_ref": 48.6,
+    "dsi_nearest_station_id": "D01A001",
+    "coordinates": [
+      [
+        41.765,
+        26.182
+      ],
+      [
+        41.751,
+        26.241
+      ],
+      [
+        41.734,
+        26.312
+      ],
+      [
+        41.718,
+        26.38
+      ],
+      [
+        41.702,
+        26.435
+      ]
+    ],
+    "nodes": [
+      {
+        "node_id": "2321400010101",
+        "lat": 41.765,
+        "lon": 26.182,
+        "dist_km": 218.0
+      },
+      {
+        "node_id": "2321400010102",
+        "lat": 41.734,
+        "lon": 26.312,
+        "dist_km": 211.0
+      },
+      {
+        "node_id": "2321400010103",
+        "lat": 41.702,
+        "lon": 26.435,
+        "dist_km": 204.0
+      }
+    ]
+  },
+  "observations_count": 11,
+  "valid_observations_count": 11,
+  "qc_summary": {
+    "total": 11,
+    "accepted": 11,
+    "rejected_width": 0,
+    "rejected_flag": 0,
+    "rejected_u": 0,
+    "rejected_iqr": 0
+  },
+  "latest_observation": {
+    "reach_id": "23214000101",
+    "river_name": "Meriç",
+    "time_str": "2026-09-27T00:41:13Z",
+    "date": "2026-09-27",
+    "wse": 50.129,
+    "wse_u": 0.246,
+    "width": 118.8,
+    "slope": 0.000302,
+    "reach_q": 0,
+    "discharge": 273.42,
+    "source": "SWOT_KaRIn_L4_DAWG"
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "reach": {
+    "reach_id": "23214200021",
+    "river_name": "Arda",
+    "section_name": "Kastanies - Arda Köprüsü AGİ & Meriç Kavşağı",
+    "country": "Yunanistan - Türkiye",
+    "reach_length_km": 16.4,
+    "dist_from_sea_km": 207.4,
+    "mean_width_m": 135.0,
+    "mean_slope": 0.00042,
+    "wse_ref": 42.6,
+    "dsi_nearest_station_id": "D01A008",
+    "coordinates": [
+      [
+        41.645,
+        26.41
+      ],
+      [
+        41.652,
+        26.468
+      ],
+      [
+        41.659,
+        26.518
+      ],
+      [
+        41.662,
+        26.545
+      ]
+    ],
+    "nodes": [
+      {
+        "node_id": "2321420002101",
+        "lat": 41.645,
+        "lon": 26.41,
+        "dist_km": 207.4
+      },
+      {
+        "node_id": "2321420002102",
+        "lat": 41.659,
+        "lon": 26.518,
+        "dist_km": 196.0
+      },
+      {
+        "node_id": "2321420002103",
+        "lat": 41.662,
+        "lon": 26.545,
+        "dist_km": 191.0
+      }
+    ]
+  },
+  "observations_count": 12,
+  "valid_observations_count": 12,
+  "qc_summary": {
+    "total": 12,
+    "accepted": 12,
+    "rejected_width": 0,
+    "rejected_flag": 0,
+    "rejected_u": 0,
+    "rejected_iqr": 0
+  },
+  "latest_observation": {
+    "reach_id": "23214200021",
+    "river_name": "Arda",
+    "time_str": "2026-09-26T01:04:14Z",
+    "date": "2026-09-26",
+    "wse": 43.809,
+    "wse_u": 0.672,
+    "width": 139.2,
+    "slope": 0.000476,
+    "reach_q": 1,
+    "discharge": 141.91,
+    "source": "SWOT_KaRIn_L4_DAWG"
+  }
+}

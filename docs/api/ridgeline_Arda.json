@@ -1,0 +1,29 @@
+{
+  "river": "Arda",
+  "profile": [
+    {
+      "reach_id": "23214200011",
+      "section_name": "Ivaylovgrad Baraj Mansabı - Sınır Geçişi",
+      "dist_from_sea_km": 232.0,
+      "reach_length_km": 24.6,
+      "wse_ref": 62.8,
+      "latest_wse": 63.807,
+      "latest_discharge_m3s": 128.67,
+      "width_m": 115.2,
+      "slope": 0.00065,
+      "country": "Bulgaristan - Yunanistan"
+    },
+    {
+      "reach_id": "23214200021",
+      "section_name": "Kastanies - Arda Köprüsü AGİ & Meriç Kavşağı",
+      "dist_from_sea_km": 207.4,
+      "reach_length_km": 16.4,
+      "wse_ref": 42.6,
+      "latest_wse": 43.809,
+      "latest_discharge_m3s": 141.91,
+      "width_m": 139.2,
+      "slope": 0.00042,
+      "country": "Yunanistan - Türkiye"
+    }
+  ]
+}

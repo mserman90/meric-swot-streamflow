@@ -1,0 +1,79 @@
+{
+  "reach": {
+    "reach_id": "23214100031",
+    "river_name": "Tunca",
+    "section_name": "Değirmenyeni AGİ - Edirne Sarayiçi & Meriç Birleşimi",
+    "country": "Türkiye",
+    "reach_length_km": 11.2,
+    "dist_from_sea_km": 199.5,
+    "mean_width_m": 64.0,
+    "mean_slope": 0.00038,
+    "wse_ref": 41.2,
+    "dsi_nearest_station_id": "D01A006",
+    "coordinates": [
+      [
+        41.725,
+        26.58
+      ],
+      [
+        41.71,
+        26.575
+      ],
+      [
+        41.685,
+        26.562
+      ],
+      [
+        41.662,
+        26.565
+      ],
+      [
+        41.642,
+        26.586
+      ]
+    ],
+    "nodes": [
+      {
+        "node_id": "2321410003101",
+        "lat": 41.725,
+        "lon": 26.58,
+        "dist_km": 199.5
+      },
+      {
+        "node_id": "2321410003102",
+        "lat": 41.71,
+        "lon": 26.575,
+        "dist_km": 194.0
+      },
+      {
+        "node_id": "2321410003103",
+        "lat": 41.642,
+        "lon": 26.586,
+        "dist_km": 188.3
+      }
+    ]
+  },
+  "observations_count": 13,
+  "valid_observations_count": 12,
+  "qc_summary": {
+    "total": 13,
+    "accepted": 12,
+    "rejected_width": 0,
+    "rejected_flag": 1,
+    "rejected_u": 1,
+    "rejected_iqr": 0
+  },
+  "latest_observation": {
+    "reach_id": "23214100031",
+    "river_name": "Tunca",
+    "time_str": "2026-09-28T06:07:14Z",
+    "date": "2026-09-28",
+    "wse": 41.657,
+    "wse_u": 0.324,
+    "width": 66.7,
+    "slope": 0.000407,
+    "reach_q": 0,
+    "discharge": 27.52,
+    "source": "SWOT_KaRIn_L4_DAWG"
+  }
+}

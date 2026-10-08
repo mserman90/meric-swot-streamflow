@@ -1,0 +1,75 @@
+{
+  "reach": {
+    "reach_id": "23214100011",
+    "river_name": "Tunca",
+    "section_name": "Elhovo - Bulgaristan Memba Sınırı",
+    "country": "Bulgaristan",
+    "reach_length_km": 28.0,
+    "dist_from_sea_km": 242.0,
+    "mean_width_m": 48.0,
+    "mean_slope": 0.00052,
+    "wse_ref": 68.4,
+    "dsi_nearest_station_id": "D01A005",
+    "coordinates": [
+      [
+        42.175,
+        26.565
+      ],
+      [
+        42.062,
+        26.57
+      ],
+      [
+        41.945,
+        26.568
+      ],
+      [
+        41.848,
+        26.572
+      ]
+    ],
+    "nodes": [
+      {
+        "node_id": "2321410001101",
+        "lat": 42.175,
+        "lon": 26.565,
+        "dist_km": 242.0
+      },
+      {
+        "node_id": "2321410001102",
+        "lat": 41.945,
+        "lon": 26.568,
+        "dist_km": 225.0
+      },
+      {
+        "node_id": "2321410001103",
+        "lat": 41.848,
+        "lon": 26.572,
+        "dist_km": 214.0
+      }
+    ]
+  },
+  "observations_count": 14,
+  "valid_observations_count": 7,
+  "qc_summary": {
+    "total": 14,
+    "accepted": 7,
+    "rejected_width": 7,
+    "rejected_flag": 0,
+    "rejected_u": 0,
+    "rejected_iqr": 0
+  },
+  "latest_observation": {
+    "reach_id": "23214100011",
+    "river_name": "Tunca",
+    "time_str": "2026-10-04T05:57:14Z",
+    "date": "2026-10-04",
+    "wse": 68.939,
+    "wse_u": 0.335,
+    "width": 52.1,
+    "slope": 0.000445,
+    "reach_q": 0,
+    "discharge": 23.42,
+    "source": "SWOT_KaRIn_L4_DAWG"
+  }
+}

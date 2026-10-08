@@ -1,0 +1,16 @@
+{
+  "total_reaches": 12,
+  "total_stations": 5,
+  "active_alerts_count": 1,
+  "system_status": "OPERATIONAL_REALTIME_SWOT",
+  "current_edirne_total_flow_m3s": 312.36,
+  "alert_level": "CRITICAL",
+  "flow_details": {
+    "kirishane_m3s": 292.89,
+    "degirmenyeni_m3s": 19.47,
+    "ipsala_m3s": 365.14,
+    "suakacagi_m3s": 30.91,
+    "arda_m3s": 151.21,
+    "total_edirne_m3s": 312.36
+  }
+}

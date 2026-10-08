@@ -1,0 +1,83 @@
+{
+  "reach": {
+    "reach_id": "23214000141",
+    "river_name": "Meriç",
+    "section_name": "Uzunköprü - Saçlımüsellim",
+    "country": "Türkiye - Yunanistan Sınırı",
+    "reach_length_km": 36.5,
+    "dist_from_sea_km": 163.0,
+    "mean_width_m": 178.0,
+    "mean_slope": 0.00022,
+    "wse_ref": 24.8,
+    "dsi_nearest_station_id": "D01A003",
+    "coordinates": [
+      [
+        41.505,
+        26.645
+      ],
+      [
+        41.442,
+        26.658
+      ],
+      [
+        41.378,
+        26.672
+      ],
+      [
+        41.312,
+        26.635
+      ],
+      [
+        41.24,
+        26.582
+      ],
+      [
+        41.155,
+        26.502
+      ]
+    ],
+    "nodes": [
+      {
+        "node_id": "2321400014101",
+        "lat": 41.505,
+        "lon": 26.645,
+        "dist_km": 163.0
+      },
+      {
+        "node_id": "2321400014102",
+        "lat": 41.378,
+        "lon": 26.672,
+        "dist_km": 145.0
+      },
+      {
+        "node_id": "2321400014103",
+        "lat": 41.155,
+        "lon": 26.502,
+        "dist_km": 126.5
+      }
+    ]
+  },
+  "observations_count": 12,
+  "valid_observations_count": 12,
+  "qc_summary": {
+    "total": 12,
+    "accepted": 12,
+    "rejected_width": 0,
+    "rejected_flag": 0,
+    "rejected_u": 0,
+    "rejected_iqr": 0
+  },
+  "latest_observation": {
+    "reach_id": "23214000141",
+    "river_name": "Meriç",
+    "time_str": "2026-10-08T03:35:14Z",
+    "date": "2026-10-08",
+    "wse": 26.357,
+    "wse_u": 0.124,
+    "width": 186.5,
+    "slope": 0.000241,
+    "reach_q": 0,
+    "discharge": 270.14,
+    "source": "SWOT_KaRIn_L4_DAWG"
+  }
+}
