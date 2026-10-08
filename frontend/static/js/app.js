@@ -76,11 +76,21 @@ function initMap() {
     zoomControl: true,
   });
 
-  // Base layers
-  const darkLayer = L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
-    attribution: "&copy; OpenStreetMap contributors &copy; CARTO",
-    maxZoom: 18,
+  // Base layers (Aydınlık, standart ve topografik altlıklar - Karanlık harita kaldırıldı)
+  const osmLayer = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors',
+    maxZoom: 19,
   }).addTo(map);
+
+  const topoLayer = L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}", {
+    attribution: "Tiles &copy; Esri &mdash; Esri, USGS, NOAA",
+    maxZoom: 18,
+  });
+
+  const lightLayer = L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
+    attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
+    maxZoom: 19,
+  });
 
   const satelliteLayer = L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}", {
     attribution: "Tiles &copy; Esri",
@@ -88,8 +98,10 @@ function initMap() {
   });
 
   const baseMaps = {
-    "Karanlık Harita (Dark)": darkLayer,
-    "Uydu Görüntüsü (Satellite)": satelliteLayer,
+    "🗺️ Standart Harita (Aydınlık OSM)": osmLayer,
+    "🏔️ Topografik Harita (Esri Topo)": topoLayer,
+    "⚪ Sade Açık Harita (CartoDB Positron)": lightLayer,
+    "🛰️ Uydu Görüntüsü (Esri Satellite)": satelliteLayer,
   };
 
   L.control.layers(baseMaps, null, { position: "topright" }).addTo(map);
@@ -189,14 +201,14 @@ async function loadReachesMap() {
     reaches.forEach((r) => {
       const coords = r.coordinates; // [[lat, lon], ...]
       const status = r.status;
-      let color = "#10b981"; // green
-      if (status === "danger") color = "#ef4444";
-      else if (status === "warning") color = "#f59e0b";
+      let color = "#0284c7"; // canlı nehir mavisi (harita üzerinde net görünür)
+      if (status === "danger") color = "#dc2626";
+      else if (status === "warning") color = "#d97706";
 
       const polyline = L.polyline(coords, {
         color: color,
-        weight: 5,
-        opacity: 0.85,
+        weight: 6,
+        opacity: 0.9,
         lineJoin: "round",
       });
 
