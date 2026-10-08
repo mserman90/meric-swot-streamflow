@@ -1,13 +1,26 @@
 # Meriç-Tunca-Arda Sınıraşan Havzaları SWOT Uydu & Hibrit ML Nehir Akım ve Taşkın İzleme Portalı
 
 [![Live Demo](https://img.shields.io/badge/Canl%C4%B1%20Uygulama-GitHub%20Pages-0284c7?style=for-the-badge&logo=github)](https://mserman90.github.io/meric-swot-streamflow/)
+[![Metodoloji Makalesi](https://img.shields.io/badge/Bilimsel%20Makale-APA%207%20Metodoloji-amber?style=for-the-badge&logo=googlescholar)](METHODOLOGY.md)
 [![Release](https://img.shields.io/badge/Release-v1.0.0-emerald?style=for-the-badge)](https://github.com/mserman90/meric-swot-streamflow/releases/tag/v1.0.0)
 
-> 🌐 **Canlı Web Uygulaması:** [https://mserman90.github.io/meric-swot-streamflow/](https://mserman90.github.io/meric-swot-streamflow/)
+> 🌐 **Canlı Web Uygulaması:** [https://mserman90.github.io/meric-swot-streamflow/](https://mserman90.github.io/meric-swot-streamflow/)  
+> 📄 **Bilimsel Metodoloji Makalesi (APA 7):** [METHODOLOGY.md](METHODOLOGY.md)
 
 Bulgaristan'dan Türkiye'ye geçen sınıraşan akarsular (**Meriç, Tunca ve Arda**) üzerinde **NASA/CNES SWOT (Surface Water and Ocean Topography)** uydu verilerini, açık kaynaklı meteorolojik verileri (ERA5-Land) ve yerel ölçüm istasyonlarını (**DSİ 11. Bölge Edirne Portalı**) birleştiren, gerçek zamanlıya yakın çalışan, etkileşimli bir **Nehir Seviyesi, Akım ve Taşkın Erken Uyarı Web Uygulaması**.
 
-Uygulama, **Kızılırmak Havzası SWOT Nehir Akım Analizi** metodolojisini temel alarak; SWOT uydusunun döngüsel (~11-21 günlük) gözlemlerini gecikmeli meteorolojik değişkenler ve Makine Öğrenmesi (Random Forest / LightGBM) ile **kesintisiz (günlük) akış hidrograflarına** dönüştürür.
+Uygulama, **Kızılırmak Havzası SWOT Nehir Akım Analizi** ve **Çobaner & Haktanır (2020) Drenaj Alanı Oranı (DAR)** metodolojilerini temel alarak; SWOT uydusunun döngüsel (~11-21 günlük) gözlemlerini gecikmeli meteorolojik değişkenler ve Makine Öğrenmesi (Random Forest / LightGBM) ile **kesintisiz (günlük) akış hidrograflarına** dönüştürür.
+
+---
+
+### 📖 Bilimsel Makale Atıfı (APA 7 Formatında)
+
+```text
+Erman, M. (2026). Sınıraşan Meriç, Tunca ve Arda havzalarında SWOT radar altimetresi 
+  ve hibrit makine öğrenmesi ile akım tahmini ve taşkın erken uyarısı: Hidrometrik 
+  doğrulama ve metodoloji. GitHub Açık Bilim Arşivi. 
+  https://github.com/mserman90/meric-swot-streamflow/blob/main/METHODOLOGY.md
+```
 
 ---
 
