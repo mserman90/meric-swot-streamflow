@@ -28,6 +28,7 @@ class EarthdataFloodClient:
         self.bbox = MERIC_BASIN_BBOX
 
     def get_auth_headers(self) -> Dict[str, str]:
+        """Headers for NASA DAAC endpoints (GES DISC, LP DAAC, NSIDC) requiring EDL Bearer authentication."""
         headers = {
             "User-Agent": f"Meric-SWOT-FloodApp/1.0 ({self.user})",
             "Accept": "application/json",
@@ -39,6 +40,7 @@ class EarthdataFloodClient:
     def search_cmr_collections(self, keyword: str, page_size: int = 2) -> List[Dict[str, Any]]:
         """
         Queries NASA CMR API for collections matching the flood theme within Meriç basin bounding box.
+        NASA CMR search is public and does not require EDL bearer token.
         """
         url = f"{self.cmr_base}/collections.json"
         params = {
@@ -46,8 +48,12 @@ class EarthdataFloodClient:
             "bounding_box": self.bbox,
             "page_size": page_size,
         }
+        headers = {
+            "User-Agent": f"Meric-SWOT-FloodApp/1.0 ({self.user})",
+            "Accept": "application/json",
+        }
         try:
-            resp = requests.get(url, params=params, headers=self.get_auth_headers(), timeout=8.0)
+            resp = requests.get(url, params=params, headers=headers, timeout=8.0)
             if resp.status_code == 200:
                 data = resp.json()
                 entries = data.get("feed", {}).get("entry", [])
