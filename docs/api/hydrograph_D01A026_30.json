@@ -1,0 +1,463 @@
+{
+  "station": {
+    "station_id": "D01A026",
+    "official_dsi_code": "D01A026",
+    "station_name": "İpsala AGİ",
+    "official_name": "MERİÇ N. İPSALA GÜMRÜK KÖPRÜSÜ",
+    "river": "Meriç",
+    "basin": "Aşağı Meriç",
+    "pafta": "G16-B1",
+    "lat": 40.94056,
+    "lon": 26.31972,
+    "lat_dms": "40°56'26\" Kuzey",
+    "lon_dms": "26°19'11\" Doğu",
+    "altitude_m": 11.0,
+    "datum_offset_m": 6.4,
+    "drainage_area_km2": 50030.0,
+    "observation_period": "08.06.1962 - 30.09.2021",
+    "historical_extremes": {
+      "record_max_discharge_m3s": 3152.0,
+      "record_max_date": "06.02.2015",
+      "record_min_discharge_m3s": 10.0,
+      "record_min_date": "24.08.1974",
+      "long_term_mean_m3s": 262.601,
+      "water_year_2021_mean_m3s": 240.228,
+      "water_year_2021_max_m3s": 1275.0,
+      "water_year_2021_max_date": "05.02.2021",
+      "water_year_2021_min_m3s": 26.8,
+      "water_year_2021_min_date": "18.08.2021"
+    },
+    "rating_curve": {
+      "curve_no": 9,
+      "title": "9. Anahtar Eğrisi (Seviye cm / Debi m³/s)",
+      "points": [
+        {
+          "stage_cm": 11,
+          "discharge_m3s": 15.5
+        },
+        {
+          "stage_cm": 35,
+          "discharge_m3s": 32.5
+        },
+        {
+          "stage_cm": 60,
+          "discharge_m3s": 52.0
+        },
+        {
+          "stage_cm": 85,
+          "discharge_m3s": 74.5
+        },
+        {
+          "stage_cm": 110,
+          "discharge_m3s": 98.5
+        },
+        {
+          "stage_cm": 135,
+          "discharge_m3s": 126.0
+        },
+        {
+          "stage_cm": 170,
+          "discharge_m3s": 165.0
+        },
+        {
+          "stage_cm": 220,
+          "discharge_m3s": 229.0
+        },
+        {
+          "stage_cm": 270,
+          "discharge_m3s": 299.0
+        },
+        {
+          "stage_cm": 320,
+          "discharge_m3s": 376.0
+        },
+        {
+          "stage_cm": 370,
+          "discharge_m3s": 458.0
+        },
+        {
+          "stage_cm": 420,
+          "discharge_m3s": 544.0
+        },
+        {
+          "stage_cm": 470,
+          "discharge_m3s": 634.0
+        },
+        {
+          "stage_cm": 520,
+          "discharge_m3s": 724.0
+        },
+        {
+          "stage_cm": 570,
+          "discharge_m3s": 818.0
+        },
+        {
+          "stage_cm": 620,
+          "discharge_m3s": 913.0
+        },
+        {
+          "stage_cm": 670,
+          "discharge_m3s": 1008.0
+        },
+        {
+          "stage_cm": 720,
+          "discharge_m3s": 1103.0
+        },
+        {
+          "stage_cm": 770,
+          "discharge_m3s": 1198.0
+        }
+      ]
+    },
+    "thresholds": {
+      "normal_max_m3s": 800.0,
+      "warning_m3s": 1100.0,
+      "alarm_m3s": 1450.0,
+      "flood_m3s": 1800.0
+    },
+    "critical_stage_m": 4.5,
+    "lead_time_from_upstream_hrs": 26.0,
+    "description": "Türk-Yunan hududu İpsala Gümrük Köprüsü üzerinde aşağı Meriç delta havzası koruma kesiti."
+  },
+  "reach_id": "23214000151",
+  "days": 30,
+  "metrics": {
+    "rmse": 26.7,
+    "pearson_r": 0.782,
+    "nse": -0.332,
+    "kge": 0.128,
+    "n_observations": 8
+  },
+  "hydrograph": [
+    {
+      "date": "2026-09-08",
+      "ground_discharge_m3s": 289.11,
+      "swot_discharge_m3s": null,
+      "ml_continuous_m3s": 289.85,
+      "precipitation_mm": 0.0,
+      "temperature_c": 23.1,
+      "is_swot_pass": false,
+      "warning_threshold_m3s": 1100.0,
+      "flood_threshold_m3s": 1800.0
+    },
+    {
+      "date": "2026-09-09",
+      "ground_discharge_m3s": 284.15,
+      "swot_discharge_m3s": null,
+      "ml_continuous_m3s": 288.13,
+      "precipitation_mm": 0.0,
+      "temperature_c": 22.9,
+      "is_swot_pass": false,
+      "warning_threshold_m3s": 1100.0,
+      "flood_threshold_m3s": 1800.0
+    },
+    {
+      "date": "2026-09-10",
+      "ground_discharge_m3s": 289.62,
+      "swot_discharge_m3s": null,
+      "ml_continuous_m3s": 289.57,
+      "precipitation_mm": 0.0,
+      "temperature_c": 22.7,
+      "is_swot_pass": false,
+      "warning_threshold_m3s": 1100.0,
+      "flood_threshold_m3s": 1800.0
+    },
+    {
+      "date": "2026-09-11",
+      "ground_discharge_m3s": 291.69,
+      "swot_discharge_m3s": null,
+      "ml_continuous_m3s": 290.8,
+      "precipitation_mm": 0.0,
+      "temperature_c": 22.6,
+      "is_swot_pass": false,
+      "warning_threshold_m3s": 1100.0,
+      "flood_threshold_m3s": 1800.0
+    },
+    {
+      "date": "2026-09-12",
+      "ground_discharge_m3s": 305.48,
+      "swot_discharge_m3s": null,
+      "ml_continuous_m3s": 301.13,
+      "precipitation_mm": 6.6,
+      "temperature_c": 22.4,
+      "is_swot_pass": false,
+      "warning_threshold_m3s": 1100.0,
+      "flood_threshold_m3s": 1800.0
+    },
+    {
+      "date": "2026-09-13",
+      "ground_discharge_m3s": 312.47,
+      "swot_discharge_m3s": null,
+      "ml_continuous_m3s": 309.99,
+      "precipitation_mm": 0.0,
+      "temperature_c": 22.3,
+      "is_swot_pass": false,
+      "warning_threshold_m3s": 1100.0,
+      "flood_threshold_m3s": 1800.0
+    },
+    {
+      "date": "2026-09-14",
+      "ground_discharge_m3s": 306.84,
+      "swot_discharge_m3s": null,
+      "ml_continuous_m3s": 304.11,
+      "precipitation_mm": 0.0,
+      "temperature_c": 22.1,
+      "is_swot_pass": false,
+      "warning_threshold_m3s": 1100.0,
+      "flood_threshold_m3s": 1800.0
+    },
+    {
+      "date": "2026-09-15",
+      "ground_discharge_m3s": 305.49,
+      "swot_discharge_m3s": null,
+      "ml_continuous_m3s": 305.04,
+      "precipitation_mm": 3.1,
+      "temperature_c": 21.9,
+      "is_swot_pass": false,
+      "warning_threshold_m3s": 1100.0,
+      "flood_threshold_m3s": 1800.0
+    },
+    {
+      "date": "2026-09-16",
+      "ground_discharge_m3s": 307.67,
+      "swot_discharge_m3s": null,
+      "ml_continuous_m3s": 305.09,
+      "precipitation_mm": 0.0,
+      "temperature_c": 21.8,
+      "is_swot_pass": false,
+      "warning_threshold_m3s": 1100.0,
+      "flood_threshold_m3s": 1800.0
+    },
+    {
+      "date": "2026-09-17",
+      "ground_discharge_m3s": 298.79,
+      "swot_discharge_m3s": null,
+      "ml_continuous_m3s": 300.44,
+      "precipitation_mm": 0.0,
+      "temperature_c": 21.6,
+      "is_swot_pass": false,
+      "warning_threshold_m3s": 1100.0,
+      "flood_threshold_m3s": 1800.0
+    },
+    {
+      "date": "2026-09-18",
+      "ground_discharge_m3s": 300.02,
+      "swot_discharge_m3s": null,
+      "ml_continuous_m3s": 300.74,
+      "precipitation_mm": 0.0,
+      "temperature_c": 21.4,
+      "is_swot_pass": false,
+      "warning_threshold_m3s": 1100.0,
+      "flood_threshold_m3s": 1800.0
+    },
+    {
+      "date": "2026-09-19",
+      "ground_discharge_m3s": 304.84,
+      "swot_discharge_m3s": null,
+      "ml_continuous_m3s": 303.37,
+      "precipitation_mm": 6.4,
+      "temperature_c": 21.2,
+      "is_swot_pass": false,
+      "warning_threshold_m3s": 1100.0,
+      "flood_threshold_m3s": 1800.0
+    },
+    {
+      "date": "2026-09-20",
+      "ground_discharge_m3s": 314.06,
+      "swot_discharge_m3s": null,
+      "ml_continuous_m3s": 309.85,
+      "precipitation_mm": 0.0,
+      "temperature_c": 21.1,
+      "is_swot_pass": false,
+      "warning_threshold_m3s": 1100.0,
+      "flood_threshold_m3s": 1800.0
+    },
+    {
+      "date": "2026-09-21",
+      "ground_discharge_m3s": 301.25,
+      "swot_discharge_m3s": null,
+      "ml_continuous_m3s": 300.78,
+      "precipitation_mm": 0.0,
+      "temperature_c": 20.9,
+      "is_swot_pass": false,
+      "warning_threshold_m3s": 1100.0,
+      "flood_threshold_m3s": 1800.0
+    },
+    {
+      "date": "2026-09-22",
+      "ground_discharge_m3s": 294.96,
+      "swot_discharge_m3s": null,
+      "ml_continuous_m3s": 297.14,
+      "precipitation_mm": 0.0,
+      "temperature_c": 20.7,
+      "is_swot_pass": false,
+      "warning_threshold_m3s": 1100.0,
+      "flood_threshold_m3s": 1800.0
+    },
+    {
+      "date": "2026-09-23",
+      "ground_discharge_m3s": 290.99,
+      "swot_discharge_m3s": null,
+      "ml_continuous_m3s": 293.25,
+      "precipitation_mm": 0.0,
+      "temperature_c": 20.5,
+      "is_swot_pass": false,
+      "warning_threshold_m3s": 1100.0,
+      "flood_threshold_m3s": 1800.0
+    },
+    {
+      "date": "2026-09-24",
+      "ground_discharge_m3s": 291.22,
+      "swot_discharge_m3s": null,
+      "ml_continuous_m3s": 291.59,
+      "precipitation_mm": 0.0,
+      "temperature_c": 20.3,
+      "is_swot_pass": false,
+      "warning_threshold_m3s": 1100.0,
+      "flood_threshold_m3s": 1800.0
+    },
+    {
+      "date": "2026-09-25",
+      "ground_discharge_m3s": 291.97,
+      "swot_discharge_m3s": null,
+      "ml_continuous_m3s": 291.82,
+      "precipitation_mm": 0.0,
+      "temperature_c": 20.1,
+      "is_swot_pass": false,
+      "warning_threshold_m3s": 1100.0,
+      "flood_threshold_m3s": 1800.0
+    },
+    {
+      "date": "2026-09-26",
+      "ground_discharge_m3s": 292.31,
+      "swot_discharge_m3s": null,
+      "ml_continuous_m3s": 292.24,
+      "precipitation_mm": 0.0,
+      "temperature_c": 20.0,
+      "is_swot_pass": false,
+      "warning_threshold_m3s": 1100.0,
+      "flood_threshold_m3s": 1800.0
+    },
+    {
+      "date": "2026-09-27",
+      "ground_discharge_m3s": 293.12,
+      "swot_discharge_m3s": null,
+      "ml_continuous_m3s": 292.28,
+      "precipitation_mm": 0.0,
+      "temperature_c": 19.8,
+      "is_swot_pass": false,
+      "warning_threshold_m3s": 1100.0,
+      "flood_threshold_m3s": 1800.0
+    },
+    {
+      "date": "2026-09-28",
+      "ground_discharge_m3s": 285.41,
+      "swot_discharge_m3s": null,
+      "ml_continuous_m3s": 287.15,
+      "precipitation_mm": 0.0,
+      "temperature_c": 19.6,
+      "is_swot_pass": false,
+      "warning_threshold_m3s": 1100.0,
+      "flood_threshold_m3s": 1800.0
+    },
+    {
+      "date": "2026-09-29",
+      "ground_discharge_m3s": 286.83,
+      "swot_discharge_m3s": null,
+      "ml_continuous_m3s": 287.43,
+      "precipitation_mm": 0.0,
+      "temperature_c": 19.4,
+      "is_swot_pass": false,
+      "warning_threshold_m3s": 1100.0,
+      "flood_threshold_m3s": 1800.0
+    },
+    {
+      "date": "2026-09-30",
+      "ground_discharge_m3s": 303.99,
+      "swot_discharge_m3s": 294.2,
+      "ml_continuous_m3s": 295.71,
+      "precipitation_mm": 5.3,
+      "temperature_c": 19.2,
+      "is_swot_pass": true,
+      "warning_threshold_m3s": 1100.0,
+      "flood_threshold_m3s": 1800.0
+    },
+    {
+      "date": "2026-10-01",
+      "ground_discharge_m3s": 303.96,
+      "swot_discharge_m3s": null,
+      "ml_continuous_m3s": 301.22,
+      "precipitation_mm": 0.0,
+      "temperature_c": 19.0,
+      "is_swot_pass": false,
+      "warning_threshold_m3s": 1100.0,
+      "flood_threshold_m3s": 1800.0
+    },
+    {
+      "date": "2026-10-02",
+      "ground_discharge_m3s": 306.08,
+      "swot_discharge_m3s": null,
+      "ml_continuous_m3s": 295.89,
+      "precipitation_mm": 0.0,
+      "temperature_c": 18.8,
+      "is_swot_pass": false,
+      "warning_threshold_m3s": 1100.0,
+      "flood_threshold_m3s": 1800.0
+    },
+    {
+      "date": "2026-10-03",
+      "ground_discharge_m3s": 305.58,
+      "swot_discharge_m3s": null,
+      "ml_continuous_m3s": 295.27,
+      "precipitation_mm": 0.0,
+      "temperature_c": 18.6,
+      "is_swot_pass": false,
+      "warning_threshold_m3s": 1100.0,
+      "flood_threshold_m3s": 1800.0
+    },
+    {
+      "date": "2026-10-04",
+      "ground_discharge_m3s": 297.97,
+      "swot_discharge_m3s": null,
+      "ml_continuous_m3s": 293.78,
+      "precipitation_mm": 0.0,
+      "temperature_c": 18.4,
+      "is_swot_pass": false,
+      "warning_threshold_m3s": 1100.0,
+      "flood_threshold_m3s": 1800.0
+    },
+    {
+      "date": "2026-10-05",
+      "ground_discharge_m3s": 292.79,
+      "swot_discharge_m3s": null,
+      "ml_continuous_m3s": 293.54,
+      "precipitation_mm": 0.0,
+      "temperature_c": 18.2,
+      "is_swot_pass": false,
+      "warning_threshold_m3s": 1100.0,
+      "flood_threshold_m3s": 1800.0
+    },
+    {
+      "date": "2026-10-06",
+      "ground_discharge_m3s": 341.39,
+      "swot_discharge_m3s": null,
+      "ml_continuous_m3s": 297.83,
+      "precipitation_mm": 21.4,
+      "temperature_c": 18.0,
+      "is_swot_pass": false,
+      "warning_threshold_m3s": 1100.0,
+      "flood_threshold_m3s": 1800.0
+    },
+    {
+      "date": "2026-10-07",
+      "ground_discharge_m3s": 363.91,
+      "swot_discharge_m3s": null,
+      "ml_continuous_m3s": 304.75,
+      "precipitation_mm": 0.0,
+      "temperature_c": 17.8,
+      "is_swot_pass": false,
+      "warning_threshold_m3s": 1100.0,
+      "flood_threshold_m3s": 1800.0
+    }
+  ]
+}

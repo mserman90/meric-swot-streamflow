@@ -55,7 +55,7 @@
     "latest_observation": {
       "reach_id": "23214000101",
       "river_name": "Meriç",
-      "time_str": "2026-09-27T02:00:17Z",
+      "time_str": "2026-09-27T02:57:04Z",
       "date": "2026-09-27",
       "wse": 50.129,
       "wse_u": 0.246,
@@ -119,7 +119,7 @@
     "latest_observation": {
       "reach_id": "23214000111",
       "river_name": "Meriç",
-      "time_str": "2026-10-08T04:05:18Z",
+      "time_str": "2026-10-08T05:02:06Z",
       "date": "2026-10-08",
       "wse": 45.274,
       "wse_u": 0.185,
@@ -141,7 +141,7 @@
     "mean_width_m": 156.0,
     "mean_slope": 0.00028,
     "wse_ref": 39.5,
-    "dsi_nearest_station_id": "D01A001",
+    "dsi_nearest_station_id": "D01A003",
     "coordinates": [
       [
         41.662,
@@ -183,7 +183,7 @@
     "latest_observation": {
       "reach_id": "23214000121",
       "river_name": "Meriç",
-      "time_str": "2026-10-03T22:57:18Z",
+      "time_str": "2026-10-03T23:54:06Z",
       "date": "2026-10-03",
       "wse": 41.006,
       "wse_u": 0.122,
@@ -205,7 +205,7 @@
     "mean_width_m": 165.0,
     "mean_slope": 0.00025,
     "wse_ref": 34.2,
-    "dsi_nearest_station_id": "D01A001",
+    "dsi_nearest_station_id": "D01A003",
     "coordinates": [
       [
         41.635,
@@ -251,7 +251,7 @@
     "latest_observation": {
       "reach_id": "23214000131",
       "river_name": "Meriç",
-      "time_str": "2026-10-05T04:32:18Z",
+      "time_str": "2026-10-05T05:29:06Z",
       "date": "2026-10-05",
       "wse": 35.775,
       "wse_u": 0.335,
@@ -273,7 +273,7 @@
     "mean_width_m": 178.0,
     "mean_slope": 0.00022,
     "wse_ref": 24.8,
-    "dsi_nearest_station_id": "D01A003",
+    "dsi_nearest_station_id": "D01A026",
     "coordinates": [
       [
         41.505,
@@ -323,7 +323,7 @@
     "latest_observation": {
       "reach_id": "23214000141",
       "river_name": "Meriç",
-      "time_str": "2026-10-08T04:54:18Z",
+      "time_str": "2026-10-08T05:51:06Z",
       "date": "2026-10-08",
       "wse": 26.357,
       "wse_u": 0.124,
@@ -345,7 +345,7 @@
     "mean_width_m": 195.0,
     "mean_slope": 0.00016,
     "wse_ref": 14.1,
-    "dsi_nearest_station_id": "D01A003",
+    "dsi_nearest_station_id": "D01A026",
     "coordinates": [
       [
         41.155,
@@ -391,7 +391,7 @@
     "latest_observation": {
       "reach_id": "23214000151",
       "river_name": "Meriç",
-      "time_str": "2026-09-30T02:50:18Z",
+      "time_str": "2026-09-30T03:47:06Z",
       "date": "2026-09-30",
       "wse": 15.598,
       "wse_u": 0.254,
@@ -413,7 +413,7 @@
     "mean_width_m": 220.0,
     "mean_slope": 0.0001,
     "wse_ref": 4.5,
-    "dsi_nearest_station_id": "D01A003",
+    "dsi_nearest_station_id": "D01A026",
     "coordinates": [
       [
         40.852,
@@ -459,7 +459,7 @@
     "latest_observation": {
       "reach_id": "23214000161",
       "river_name": "Meriç",
-      "time_str": "2026-10-05T06:42:18Z",
+      "time_str": "2026-10-05T07:39:06Z",
       "date": "2026-10-05",
       "wse": 6.045,
       "wse_u": 0.095,
@@ -481,7 +481,7 @@
     "mean_width_m": 48.0,
     "mean_slope": 0.00052,
     "wse_ref": 68.4,
-    "dsi_nearest_station_id": "D01A005",
+    "dsi_nearest_station_id": "E01A013",
     "coordinates": [
       [
         42.175,
@@ -523,7 +523,7 @@
     "latest_observation": {
       "reach_id": "23214100011",
       "river_name": "Tunca",
-      "time_str": "2026-10-04T07:16:18Z",
+      "time_str": "2026-10-04T08:13:06Z",
       "date": "2026-10-04",
       "wse": 68.939,
       "wse_u": 0.335,
@@ -545,7 +545,7 @@
     "mean_width_m": 58.0,
     "mean_slope": 0.00045,
     "wse_ref": 52.1,
-    "dsi_nearest_station_id": "D01A005",
+    "dsi_nearest_station_id": "E01A013",
     "coordinates": [
       [
         41.848,
@@ -587,7 +587,7 @@
     "latest_observation": {
       "reach_id": "23214100021",
       "river_name": "Tunca",
-      "time_str": "2026-10-03T01:37:17Z",
+      "time_str": "2026-10-03T02:34:04Z",
       "date": "2026-10-03",
       "wse": 52.474,
       "wse_u": 1.662,
@@ -609,7 +609,7 @@
     "mean_width_m": 64.0,
     "mean_slope": 0.00038,
     "wse_ref": 41.2,
-    "dsi_nearest_station_id": "D01A006",
+    "dsi_nearest_station_id": "D01A078",
     "coordinates": [
       [
         41.725,
@@ -655,7 +655,7 @@
     "latest_observation": {
       "reach_id": "23214100031",
       "river_name": "Tunca",
-      "time_str": "2026-09-28T07:26:18Z",
+      "time_str": "2026-09-28T08:23:06Z",
       "date": "2026-09-28",
       "wse": 41.657,
       "wse_u": 0.324,
@@ -719,7 +719,7 @@
     "latest_observation": {
       "reach_id": "23214200011",
       "river_name": "Arda",
-      "time_str": "2026-10-06T05:21:18Z",
+      "time_str": "2026-10-06T06:18:06Z",
       "date": "2026-10-06",
       "wse": 63.807,
       "wse_u": 0.245,
@@ -783,7 +783,7 @@
     "latest_observation": {
       "reach_id": "23214200021",
       "river_name": "Arda",
-      "time_str": "2026-09-26T02:23:18Z",
+      "time_str": "2026-09-26T03:20:06Z",
       "date": "2026-09-26",
       "wse": 43.809,
       "wse_u": 0.672,

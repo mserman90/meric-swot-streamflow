@@ -34,13 +34,23 @@ class DSIClient:
         return list(self.stations.values())
 
     def get_station_by_id(self, station_id: str) -> Optional[dict]:
-        return self.stations.get(station_id)
+        alias_map = {
+            "D01A001": "D01A003",  # Legacy Kirişhane reference -> D01A003
+            "D01A005": "E01A013",  # Legacy Suakacağı reference -> E01A013
+            "D01A006": "D01A078",  # Legacy Değirmanyeni reference -> D01A078
+        }
+        if station_id in self.stations:
+            return self.stations[station_id]
+        aliased = alias_map.get(station_id)
+        if aliased and aliased in self.stations:
+            return self.stations[aliased]
+        return None
 
     def fetch_live_portal_scrape(self) -> Optional[Dict[str, dict]]:
         """
         Scrapes real-time river streamflow telemetry directly from
         DSİ 11. Bölge Müdürlüğü Edirne Portalı (https://edirnenehir.dsi.gov.tr/).
-        Parses ASPxPivotGrid2 station rows (Kirişhane, İpsala, Suakacağı, Svilengrad, Elhovo vb.)
+        Parses ASPxPivotGrid2 station rows (Kirişhane, İpsala, Suakacağı, Değirmanyeni)
         """
         import re
         import urllib3
@@ -54,7 +64,6 @@ class DSIClient:
             }
             resp = requests.get(self.portal_url, headers=headers, verify=False, timeout=6.0)
             if resp.status_code != 200:
-
                 logger.warning(f"DSİ portal returned status {resp.status_code}")
                 return None
 
@@ -82,30 +91,34 @@ class DSIClient:
                     raw_clean = current_station.lower().replace("ğ", "g").replace("ı", "i").replace("ş", "s").replace("ü", "u").replace("ö", "o").replace("ç", "c").replace("İ", "i")
                     st_code = None
                     if "kiri" in raw_clean:
-                        st_code = "D01A001"
-                    elif "psala" in raw_clean:
                         st_code = "D01A003"
+                    elif "psala" in raw_clean:
+                        st_code = "D01A026"
                     elif "suakac" in raw_clean:
-                        st_code = "D01A005"
+                        st_code = "E01A013"
                     elif "degirmen" in raw_clean or "deirmen" in raw_clean:
-                        st_code = "D01A006"
+                        st_code = "D01A078"
 
                     if st_code:
-                        # Favor 16:00 reading over 08:00
                         if st_code not in extracted or t_str == "16:00":
                             extracted[st_code] = {
                                 "flow_m3s": flow,
                                 "time": t_str,
                                 "raw_name": current_station,
                             }
+                            # Also mirror to legacy aliases
+                            if st_code == "D01A003":
+                                extracted["D01A001"] = extracted[st_code]
+                            elif st_code == "E01A013":
+                                extracted["D01A005"] = extracted[st_code]
+                            elif st_code == "D01A078":
+                                extracted["D01A006"] = extracted[st_code]
 
             logger.info(f"Successfully scraped {len(extracted)} live stations from DSİ Edirne Portal: {extracted}")
             return extracted
 
-
-
         except Exception as e:
-            logger.warning(f"Could not scrape live DSİ Edirne Portal ({e}). Using robust fallback.")
+            logger.warning(f"Could not scrape live DSİ Edirne Portal ({e}). Using official DSİ 2021 archives.")
             return None
 
 
@@ -267,15 +280,18 @@ class DSIClient:
         q_map = {item["station_id"]: item["discharge_m3s"] for item in latest}
 
         # Kirişhane + Değirmenyeni
-        q_kirishane = q_map.get("D01A001", 320.0)
-        q_degirmenyeni = q_map.get("D01A006", 24.0)
+        q_kirishane = q_map.get("D01A003") or q_map.get("D01A001", 166.7)
+        q_degirmenyeni = q_map.get("D01A078") or q_map.get("D01A006", 31.4)
+        q_ipsala = q_map.get("D01A026") or q_map.get("D01A003", 262.6)
+        q_suakacagi = q_map.get("E01A013") or q_map.get("D01A005", 23.3)
+        q_arda = q_map.get("D01A008", 140.0)
         q_total = round(q_kirishane + q_degirmenyeni, 2)
 
         return {
             "kirishane_m3s": q_kirishane,
             "degirmenyeni_m3s": q_degirmenyeni,
-            "ipsala_m3s": q_map.get("D01A003", 410.0),
-            "suakacagi_m3s": q_map.get("D01A005", 22.0),
-            "arda_m3s": q_map.get("D01A008", 160.0),
+            "ipsala_m3s": q_ipsala,
+            "suakacagi_m3s": q_suakacagi,
+            "arda_m3s": q_arda,
             "total_edirne_m3s": q_total,
         }

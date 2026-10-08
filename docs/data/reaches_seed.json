@@ -56,7 +56,7 @@
     "mean_width_m": 156.0,
     "mean_slope": 0.00028,
     "wse_ref": 39.5,
-    "dsi_nearest_station_id": "D01A001",
+    "dsi_nearest_station_id": "D01A003",
     "coordinates": [
       [41.662, 26.545],
       [41.658, 26.556],
@@ -79,7 +79,7 @@
     "mean_width_m": 165.0,
     "mean_slope": 0.00025,
     "wse_ref": 34.2,
-    "dsi_nearest_station_id": "D01A001",
+    "dsi_nearest_station_id": "D01A003",
     "coordinates": [
       [41.635, 26.582],
       [41.615, 26.602],
@@ -103,7 +103,7 @@
     "mean_width_m": 178.0,
     "mean_slope": 0.00022,
     "wse_ref": 24.8,
-    "dsi_nearest_station_id": "D01A003",
+    "dsi_nearest_station_id": "D01A026",
     "coordinates": [
       [41.505, 26.645],
       [41.442, 26.658],
@@ -128,7 +128,7 @@
     "mean_width_m": 195.0,
     "mean_slope": 0.00016,
     "wse_ref": 14.1,
-    "dsi_nearest_station_id": "D01A003",
+    "dsi_nearest_station_id": "D01A026",
     "coordinates": [
       [41.155, 26.502],
       [41.062, 26.445],
@@ -152,7 +152,7 @@
     "mean_width_m": 220.0,
     "mean_slope": 0.00010,
     "wse_ref": 4.5,
-    "dsi_nearest_station_id": "D01A003",
+    "dsi_nearest_station_id": "D01A026",
     "coordinates": [
       [40.852, 26.324],
       [40.795, 26.250],
@@ -176,7 +176,7 @@
     "mean_width_m": 48.0,
     "mean_slope": 0.00052,
     "wse_ref": 68.4,
-    "dsi_nearest_station_id": "D01A005",
+    "dsi_nearest_station_id": "E01A013",
     "coordinates": [
       [42.175, 26.565],
       [42.062, 26.570],
@@ -199,7 +199,7 @@
     "mean_width_m": 58.0,
     "mean_slope": 0.00045,
     "wse_ref": 52.1,
-    "dsi_nearest_station_id": "D01A005",
+    "dsi_nearest_station_id": "E01A013",
     "coordinates": [
       [41.848, 26.572],
       [41.782, 26.568],
@@ -222,7 +222,7 @@
     "mean_width_m": 64.0,
     "mean_slope": 0.00038,
     "wse_ref": 41.2,
-    "dsi_nearest_station_id": "D01A006",
+    "dsi_nearest_station_id": "D01A078",
     "coordinates": [
       [41.725, 26.580],
       [41.710, 26.575],

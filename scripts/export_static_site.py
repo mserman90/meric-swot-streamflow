@@ -137,28 +137,46 @@ def export_static_site():
 
     # 9. Export Hydrograph permutations
     print("Exporting hydrographs for all stations and spans...")
-    station_ids = ["D01A001", "D01A003", "D01A005", "D01A006", "D01A008"]
+    official_station_reach_map = {
+        "D01A003": "23214000121", # Kirişhane (Meriç)
+        "D01A026": "23214000151", # İpsala (Aşağı Meriç)
+        "E01A013": "23214100021", # Suakacağı (Tunca)
+        "D01A078": "23214100031", # Değirmanyeni (Tunca)
+        "D01A001": "23214000101", # Kapıkule (Meriç Sınır)
+        "D01A008": "23214200021", # Arda Köprüsü
+    }
     spans = [30, 90, 180, 365]
-    for st_id in station_ids:
+    for st_id, reach_id in official_station_reach_map.items():
         st_obj = dsi.get_station_by_id(st_id)
         for span in spans:
             print(f"  Generating hydrograph: {st_id} ({span} days)...")
             hydrograph_data, metrics = engine.generate_continuous_hydrograph(
                 station_id=st_id,
-                reach_id="23214000121",
+                reach_id=reach_id,
                 days_span=span,
             )
             metrics_dict = metrics.model_dump() if hasattr(metrics, "model_dump") else (metrics.dict() if hasattr(metrics, "dict") else dict(metrics))
             hydro_list = [p.model_dump() if hasattr(p, "model_dump") else (p.dict() if hasattr(p, "dict") else dict(p)) for p in hydrograph_data]
             res = {
                 "station": st_obj,
-                "reach_id": "23214000121",
+                "reach_id": reach_id,
                 "days": span,
                 "metrics": metrics_dict,
                 "hydrograph": hydro_list,
             }
             with open(api_dir / f"hydrograph_{st_id}_{span}.json", "w", encoding="utf-8") as f:
                 json.dump(res, f, ensure_ascii=False, indent=2)
+
+            # Mirror to legacy IDs for backwards compatibility
+            if st_id == "D01A003":
+                with open(api_dir / f"hydrograph_D01A001_{span}.json", "w", encoding="utf-8") as f:
+                    json.dump(res, f, ensure_ascii=False, indent=2)
+            elif st_id == "E01A013":
+                with open(api_dir / f"hydrograph_D01A005_{span}.json", "w", encoding="utf-8") as f:
+                    json.dump(res, f, ensure_ascii=False, indent=2)
+            elif st_id == "D01A078":
+                with open(api_dir / f"hydrograph_D01A006_{span}.json", "w", encoding="utf-8") as f:
+                    json.dump(res, f, ensure_ascii=False, indent=2)
 
     # 10. Copy static files & directories
     print("Copying static assets and data...")

@@ -3,7 +3,7 @@ let map;
 let reachesLayer;
 let stationsLayer;
 let damsLayer;
-let currentStationId = "D01A001"; // Kirişhane AGİ default
+let currentStationId = "D01A003"; // Official Kirişhane AGİ default
 let currentReachId = "23214000121"; // Meriç Edirne Reach
 let currentDays = 180;
 let currentRiver = "Meriç";
@@ -105,11 +105,15 @@ function initEventListeners() {
     currentStationId = e.target.value;
     // Map station to nearest reach
     const stationReachMap = {
-      "D01A001": "23214000121", // Kirişhane -> Meriç Edirne
-      "D01A003": "23214000151", // İpsala -> İpsala Reach
-      "D01A005": "23214100021", // Suakacağı -> Tunca Sınır
-      "D01A006": "23214100031", // Değirmenyeni -> Tunca Sarayiçi
+      "D01A003": "23214000121", // Kirişhane -> Meriç Edirne
+      "D01A026": "23214000151", // İpsala -> İpsala Reach
+      "E01A013": "23214100021", // Suakacağı -> Tunca Sınır
+      "D01A078": "23214100031", // Değirmenyeni -> Tunca Sarayiçi
+      "D01A001": "23214000101", // Kapıkule -> Meriç Sınır
       "D01A008": "23214200021", // Arda Köprüsü -> Arda Mansap
+      // Backward compatibility aliases
+      "D01A005": "23214100021",
+      "D01A006": "23214100031",
     };
     currentReachId = stationReachMap[currentStationId] || "23214000121";
     loadHydrograph();

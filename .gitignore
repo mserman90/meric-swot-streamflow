@@ -23,3 +23,6 @@ ENV/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Large documents & downloads
+*.pdf

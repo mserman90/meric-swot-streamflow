@@ -1,16 +1,16 @@
 {
   "total_reaches": 12,
-  "total_stations": 5,
-  "active_alerts_count": 1,
+  "total_stations": 6,
+  "active_alerts_count": 0,
   "system_status": "OPERATIONAL_REALTIME_SWOT",
-  "current_edirne_total_flow_m3s": 312.36,
-  "alert_level": "CRITICAL",
+  "current_edirne_total_flow_m3s": 377.77,
+  "alert_level": "NORMAL",
   "flow_details": {
-    "kirishane_m3s": 292.89,
-    "degirmenyeni_m3s": 19.47,
-    "ipsala_m3s": 365.14,
-    "suakacagi_m3s": 30.91,
+    "kirishane_m3s": 365.14,
+    "degirmenyeni_m3s": 12.63,
+    "ipsala_m3s": 291.87,
+    "suakacagi_m3s": 11.16,
     "arda_m3s": 151.21,
-    "total_edirne_m3s": 312.36
+    "total_edirne_m3s": 377.77
   }
 }

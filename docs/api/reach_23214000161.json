@@ -9,7 +9,7 @@
     "mean_width_m": 220.0,
     "mean_slope": 0.0001,
     "wse_ref": 4.5,
-    "dsi_nearest_station_id": "D01A003",
+    "dsi_nearest_station_id": "D01A026",
     "coordinates": [
       [
         40.852,
@@ -66,7 +66,7 @@
   "latest_observation": {
     "reach_id": "23214000161",
     "river_name": "Meriç",
-    "time_str": "2026-10-05T06:42:18Z",
+    "time_str": "2026-10-05T07:39:06Z",
     "date": "2026-10-05",
     "wse": 6.045,
     "wse_u": 0.095,

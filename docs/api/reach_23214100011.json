@@ -9,7 +9,7 @@
     "mean_width_m": 48.0,
     "mean_slope": 0.00052,
     "wse_ref": 68.4,
-    "dsi_nearest_station_id": "D01A005",
+    "dsi_nearest_station_id": "E01A013",
     "coordinates": [
       [
         42.175,
@@ -62,7 +62,7 @@
   "latest_observation": {
     "reach_id": "23214100011",
     "river_name": "Tunca",
-    "time_str": "2026-10-04T07:16:18Z",
+    "time_str": "2026-10-04T08:13:06Z",
     "date": "2026-10-04",
     "wse": 68.939,
     "wse_u": 0.335,

@@ -1,22 +1,128 @@
 {
   "station": {
     "station_id": "D01A003",
-    "station_name": "İpsala AGİ",
+    "official_dsi_code": "D01A003",
+    "station_name": "Kirişhane AGİ",
+    "official_name": "MERİÇ N. KİRİŞHANE",
     "river": "Meriç",
-    "basin": "Aşağı Meriç",
-    "lat": 40.915,
-    "lon": 26.378,
-    "altitude_m": 12.1,
-    "datum_offset_m": 6.4,
-    "thresholds": {
-      "normal_max_m3s": 800.0,
-      "warning_m3s": 1100.0,
-      "alarm_m3s": 1450.0,
-      "flood_m3s": 1800.0
+    "basin": "01. Meriç-Ergene",
+    "pafta": "E17-D1",
+    "lat": 41.64722,
+    "lon": 26.57056,
+    "lat_dms": "41°38'50\" Kuzey",
+    "lon_dms": "26°34'14\" Doğu",
+    "altitude_m": 30.0,
+    "datum_offset_m": 6.85,
+    "drainage_area_km2": 34990.0,
+    "observation_period": "02.02.1950 - 30.09.2021",
+    "historical_extremes": {
+      "record_max_discharge_m3s": 2200.0,
+      "record_max_date": "04.03.1965",
+      "record_min_discharge_m3s": 0.45,
+      "record_min_date": "25.07.1990",
+      "long_term_mean_m3s": 166.655,
+      "water_year_2021_mean_m3s": 167.539,
+      "water_year_2021_max_m3s": 911.0,
+      "water_year_2021_max_date": "15.01.2021",
+      "water_year_2021_min_m3s": 26.0,
+      "water_year_2021_min_date": "07.10.2020",
+      "total_annual_volume_million_m3": 5282.2
     },
-    "critical_stage_m": 4.5,
-    "lead_time_from_upstream_hrs": 26.0,
-    "description": "Aşağı Meriç delta havzası ve İpsala çeltik ovaları koruma kontrol kesiti."
+    "rating_curve": {
+      "curve_no": 15,
+      "title": "15. Anahtar Eğrisi (Seviye cm / Debi m³/s)",
+      "points": [
+        {
+          "stage_cm": 30,
+          "discharge_m3s": 28.5
+        },
+        {
+          "stage_cm": 45,
+          "discharge_m3s": 41.8
+        },
+        {
+          "stage_cm": 60,
+          "discharge_m3s": 56.5
+        },
+        {
+          "stage_cm": 75,
+          "discharge_m3s": 73.0
+        },
+        {
+          "stage_cm": 90,
+          "discharge_m3s": 91.0
+        },
+        {
+          "stage_cm": 105,
+          "discharge_m3s": 111.0
+        },
+        {
+          "stage_cm": 130,
+          "discharge_m3s": 148.0
+        },
+        {
+          "stage_cm": 160,
+          "discharge_m3s": 199.0
+        },
+        {
+          "stage_cm": 190,
+          "discharge_m3s": 257.0
+        },
+        {
+          "stage_cm": 220,
+          "discharge_m3s": 320.0
+        },
+        {
+          "stage_cm": 250,
+          "discharge_m3s": 390.0
+        },
+        {
+          "stage_cm": 280,
+          "discharge_m3s": 462.0
+        },
+        {
+          "stage_cm": 310,
+          "discharge_m3s": 537.0
+        },
+        {
+          "stage_cm": 340,
+          "discharge_m3s": 616.0
+        },
+        {
+          "stage_cm": 370,
+          "discharge_m3s": 700.0
+        },
+        {
+          "stage_cm": 400,
+          "discharge_m3s": 787.0
+        },
+        {
+          "stage_cm": 430,
+          "discharge_m3s": 875.0
+        },
+        {
+          "stage_cm": 460,
+          "discharge_m3s": 966.0
+        },
+        {
+          "stage_cm": 490,
+          "discharge_m3s": 1059.0
+        },
+        {
+          "stage_cm": 500,
+          "discharge_m3s": 1090.0
+        }
+      ]
+    },
+    "thresholds": {
+      "normal_max_m3s": 500.0,
+      "warning_m3s": 750.0,
+      "alarm_m3s": 1000.0,
+      "flood_m3s": 1300.0
+    },
+    "critical_stage_m": 5.8,
+    "lead_time_from_upstream_hrs": 13.5,
+    "description": "Edirne şehir merkezinde Meriç ile Tunca nehirlerinin birleşiminden 300 m mansapta ana kontrol istasyonu."
   },
   "reach_id": "23214000121",
   "days": 180,
@@ -36,8 +142,8 @@
       "precipitation_mm": 4.1,
       "temperature_c": 12.9,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-04-12",
@@ -47,8 +153,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 13.1,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-04-13",
@@ -58,8 +164,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 13.3,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-04-14",
@@ -69,8 +175,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 13.5,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-04-15",
@@ -80,8 +186,8 @@
       "precipitation_mm": 4.6,
       "temperature_c": 13.7,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-04-16",
@@ -91,8 +197,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 13.9,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-04-17",
@@ -102,8 +208,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 14.1,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-04-18",
@@ -113,8 +219,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 14.3,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-04-19",
@@ -124,8 +230,8 @@
       "precipitation_mm": 1.7,
       "temperature_c": 14.5,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-04-20",
@@ -135,8 +241,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 14.7,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-04-21",
@@ -146,8 +252,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 14.9,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-04-22",
@@ -157,8 +263,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 15.2,
       "is_swot_pass": true,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-04-23",
@@ -168,8 +274,8 @@
       "precipitation_mm": 22.6,
       "temperature_c": 15.4,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-04-24",
@@ -179,8 +285,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 15.6,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-04-25",
@@ -190,8 +296,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 15.8,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-04-26",
@@ -201,8 +307,8 @@
       "precipitation_mm": 0.3,
       "temperature_c": 16.0,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-04-27",
@@ -212,8 +318,8 @@
       "precipitation_mm": 7.8,
       "temperature_c": 16.2,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-04-28",
@@ -223,8 +329,8 @@
       "precipitation_mm": 14.2,
       "temperature_c": 16.4,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-04-29",
@@ -234,8 +340,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 16.6,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-04-30",
@@ -245,8 +351,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 16.8,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-05-01",
@@ -256,8 +362,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 17.0,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-05-02",
@@ -267,8 +373,8 @@
       "precipitation_mm": 12.5,
       "temperature_c": 17.2,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-05-03",
@@ -278,8 +384,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 17.4,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-05-04",
@@ -289,8 +395,8 @@
       "precipitation_mm": 5.8,
       "temperature_c": 17.6,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-05-05",
@@ -300,8 +406,8 @@
       "precipitation_mm": 20.9,
       "temperature_c": 17.8,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-05-06",
@@ -311,8 +417,8 @@
       "precipitation_mm": 2.0,
       "temperature_c": 18.0,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-05-07",
@@ -322,8 +428,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 18.2,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-05-08",
@@ -333,8 +439,8 @@
       "precipitation_mm": 5.1,
       "temperature_c": 18.4,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-05-09",
@@ -344,8 +450,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 18.6,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-05-10",
@@ -355,8 +461,8 @@
       "precipitation_mm": 6.3,
       "temperature_c": 18.8,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-05-11",
@@ -366,8 +472,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 19.0,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-05-12",
@@ -377,8 +483,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 19.2,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-05-13",
@@ -388,8 +494,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 19.4,
       "is_swot_pass": true,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-05-14",
@@ -399,8 +505,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 19.6,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-05-15",
@@ -410,8 +516,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 19.8,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-05-16",
@@ -421,8 +527,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 20.0,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-05-17",
@@ -432,8 +538,8 @@
       "precipitation_mm": 4.1,
       "temperature_c": 20.1,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-05-18",
@@ -443,8 +549,8 @@
       "precipitation_mm": 14.5,
       "temperature_c": 20.3,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-05-19",
@@ -454,8 +560,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 20.5,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-05-20",
@@ -465,8 +571,8 @@
       "precipitation_mm": 4.4,
       "temperature_c": 20.7,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-05-21",
@@ -476,8 +582,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 20.9,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-05-22",
@@ -487,8 +593,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 21.1,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-05-23",
@@ -498,8 +604,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 21.2,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-05-24",
@@ -509,8 +615,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 21.4,
       "is_swot_pass": true,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-05-25",
@@ -520,8 +626,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 21.6,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-05-26",
@@ -531,8 +637,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 21.8,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-05-27",
@@ -542,8 +648,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 21.9,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-05-28",
@@ -553,8 +659,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 22.1,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-05-29",
@@ -564,8 +670,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 22.3,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-05-30",
@@ -575,8 +681,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 22.4,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-05-31",
@@ -586,8 +692,8 @@
       "precipitation_mm": 0.2,
       "temperature_c": 22.6,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-06-01",
@@ -597,8 +703,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 22.7,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-06-02",
@@ -608,8 +714,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 22.9,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-06-03",
@@ -619,8 +725,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 23.1,
       "is_swot_pass": true,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-06-04",
@@ -630,8 +736,8 @@
       "precipitation_mm": 11.5,
       "temperature_c": 23.2,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-06-05",
@@ -641,8 +747,8 @@
       "precipitation_mm": 9.5,
       "temperature_c": 23.4,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-06-06",
@@ -652,8 +758,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 23.5,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-06-07",
@@ -663,8 +769,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 23.6,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-06-08",
@@ -674,8 +780,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 23.8,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-06-09",
@@ -685,8 +791,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 23.9,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-06-10",
@@ -696,8 +802,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 24.1,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-06-11",
@@ -707,8 +813,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 24.2,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-06-12",
@@ -718,8 +824,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 24.3,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-06-13",
@@ -729,8 +835,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 24.5,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-06-14",
@@ -740,8 +846,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 24.6,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-06-15",
@@ -751,8 +857,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 24.7,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-06-16",
@@ -762,8 +868,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 24.8,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-06-17",
@@ -773,8 +879,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 24.9,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-06-18",
@@ -784,8 +890,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 25.1,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-06-19",
@@ -795,8 +901,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 25.2,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-06-20",
@@ -806,8 +912,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 25.3,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-06-21",
@@ -817,8 +923,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 25.4,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-06-22",
@@ -828,8 +934,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 25.5,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-06-23",
@@ -839,8 +945,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 25.6,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-06-24",
@@ -850,8 +956,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 25.7,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-06-25",
@@ -861,8 +967,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 25.8,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-06-26",
@@ -872,8 +978,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 25.9,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-06-27",
@@ -883,8 +989,8 @@
       "precipitation_mm": 20.6,
       "temperature_c": 25.9,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-06-28",
@@ -894,8 +1000,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 26.0,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-06-29",
@@ -905,8 +1011,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 26.1,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-06-30",
@@ -916,8 +1022,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 26.2,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-07-01",
@@ -927,8 +1033,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 26.3,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-07-02",
@@ -938,8 +1044,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 26.3,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-07-03",
@@ -949,8 +1055,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 26.4,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-07-04",
@@ -960,8 +1066,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 26.5,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-07-05",
@@ -971,8 +1077,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 26.5,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-07-06",
@@ -982,8 +1088,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 26.6,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-07-07",
@@ -993,8 +1099,8 @@
       "precipitation_mm": 4.9,
       "temperature_c": 26.6,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-07-08",
@@ -1004,8 +1110,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 26.7,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-07-09",
@@ -1015,8 +1121,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 26.7,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-07-10",
@@ -1026,8 +1132,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 26.8,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-07-11",
@@ -1037,8 +1143,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 26.8,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-07-12",
@@ -1048,8 +1154,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 26.8,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-07-13",
@@ -1059,8 +1165,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 26.9,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-07-14",
@@ -1070,8 +1176,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 26.9,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-07-15",
@@ -1081,8 +1187,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 26.9,
       "is_swot_pass": true,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-07-16",
@@ -1092,8 +1198,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 26.9,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-07-17",
@@ -1103,8 +1209,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 27.0,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-07-18",
@@ -1114,8 +1220,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 27.0,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-07-19",
@@ -1125,8 +1231,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 27.0,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-07-20",
@@ -1136,8 +1242,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 27.0,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-07-21",
@@ -1147,8 +1253,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 27.0,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-07-22",
@@ -1158,8 +1264,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 27.0,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-07-23",
@@ -1169,8 +1275,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 27.0,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-07-24",
@@ -1180,8 +1286,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 27.0,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-07-25",
@@ -1191,8 +1297,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 27.0,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-07-26",
@@ -1202,8 +1308,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 27.0,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-07-27",
@@ -1213,8 +1319,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 26.9,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-07-28",
@@ -1224,8 +1330,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 26.9,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-07-29",
@@ -1235,8 +1341,8 @@
       "precipitation_mm": 4.1,
       "temperature_c": 26.9,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-07-30",
@@ -1246,8 +1352,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 26.9,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-07-31",
@@ -1257,8 +1363,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 26.8,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-08-01",
@@ -1268,8 +1374,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 26.8,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-08-02",
@@ -1279,8 +1385,8 @@
       "precipitation_mm": 3.1,
       "temperature_c": 26.8,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-08-03",
@@ -1290,8 +1396,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 26.7,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-08-04",
@@ -1301,8 +1407,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 26.7,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-08-05",
@@ -1312,8 +1418,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 26.6,
       "is_swot_pass": true,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-08-06",
@@ -1323,8 +1429,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 26.6,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-08-07",
@@ -1334,8 +1440,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 26.5,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-08-08",
@@ -1345,8 +1451,8 @@
       "precipitation_mm": 1.0,
       "temperature_c": 26.5,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-08-09",
@@ -1356,8 +1462,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 26.4,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-08-10",
@@ -1367,8 +1473,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 26.3,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-08-11",
@@ -1378,8 +1484,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 26.3,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-08-12",
@@ -1389,8 +1495,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 26.2,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-08-13",
@@ -1400,8 +1506,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 26.1,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-08-14",
@@ -1411,8 +1517,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 26.0,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-08-15",
@@ -1422,8 +1528,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 25.9,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-08-16",
@@ -1433,8 +1539,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 25.9,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-08-17",
@@ -1444,8 +1550,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 25.8,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-08-18",
@@ -1455,8 +1561,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 25.7,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-08-19",
@@ -1466,8 +1572,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 25.6,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-08-20",
@@ -1477,8 +1583,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 25.5,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-08-21",
@@ -1488,8 +1594,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 25.4,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-08-22",
@@ -1499,8 +1605,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 25.3,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-08-23",
@@ -1510,8 +1616,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 25.2,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-08-24",
@@ -1521,8 +1627,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 25.1,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-08-25",
@@ -1532,8 +1638,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 24.9,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-08-26",
@@ -1543,8 +1649,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 24.8,
       "is_swot_pass": true,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-08-27",
@@ -1554,8 +1660,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 24.7,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-08-28",
@@ -1565,8 +1671,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 24.6,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-08-29",
@@ -1576,8 +1682,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 24.5,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-08-30",
@@ -1587,8 +1693,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 24.3,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-08-31",
@@ -1598,8 +1704,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 24.2,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-09-01",
@@ -1609,8 +1715,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 24.1,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-09-02",
@@ -1620,8 +1726,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 23.9,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-09-03",
@@ -1631,8 +1737,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 23.8,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-09-04",
@@ -1642,8 +1748,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 23.6,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-09-05",
@@ -1653,8 +1759,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 23.5,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-09-06",
@@ -1664,8 +1770,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 23.4,
       "is_swot_pass": true,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-09-07",
@@ -1675,8 +1781,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 23.2,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-09-08",
@@ -1686,8 +1792,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 23.1,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-09-09",
@@ -1697,8 +1803,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 22.9,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-09-10",
@@ -1708,8 +1814,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 22.7,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-09-11",
@@ -1719,8 +1825,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 22.6,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-09-12",
@@ -1730,8 +1836,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 22.4,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-09-13",
@@ -1741,8 +1847,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 22.3,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-09-14",
@@ -1752,8 +1858,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 22.1,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-09-15",
@@ -1763,8 +1869,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 21.9,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-09-16",
@@ -1774,8 +1880,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 21.8,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-09-17",
@@ -1785,8 +1891,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 21.6,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-09-18",
@@ -1796,8 +1902,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 21.4,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-09-19",
@@ -1807,8 +1913,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 21.2,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-09-20",
@@ -1818,8 +1924,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 21.1,
       "is_swot_pass": true,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-09-21",
@@ -1829,8 +1935,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 20.9,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-09-22",
@@ -1840,8 +1946,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 20.7,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-09-23",
@@ -1851,8 +1957,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 20.5,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-09-24",
@@ -1862,8 +1968,8 @@
       "precipitation_mm": 39.1,
       "temperature_c": 20.3,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-09-25",
@@ -1873,8 +1979,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 20.1,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-09-26",
@@ -1884,8 +1990,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 20.0,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-09-27",
@@ -1895,8 +2001,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 19.8,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-09-28",
@@ -1906,8 +2012,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 19.6,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-09-29",
@@ -1917,8 +2023,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 19.4,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-09-30",
@@ -1928,8 +2034,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 19.2,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-10-01",
@@ -1939,8 +2045,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 19.0,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-10-02",
@@ -1950,8 +2056,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 18.8,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-10-03",
@@ -1961,8 +2067,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 18.6,
       "is_swot_pass": true,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-10-04",
@@ -1972,8 +2078,8 @@
       "precipitation_mm": 0.3,
       "temperature_c": 18.4,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-10-05",
@@ -1983,8 +2089,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 18.2,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-10-06",
@@ -1994,8 +2100,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 18.0,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     },
     {
       "date": "2026-10-07",
@@ -2005,8 +2111,8 @@
       "precipitation_mm": 0.0,
       "temperature_c": 17.8,
       "is_swot_pass": false,
-      "warning_threshold_m3s": 1100.0,
-      "flood_threshold_m3s": 1800.0
+      "warning_threshold_m3s": 750.0,
+      "flood_threshold_m3s": 1300.0
     }
   ]
 }

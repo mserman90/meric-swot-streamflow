@@ -24,6 +24,65 @@ from app.services.dsi_client import DSIClient
 
 logger = logging.getLogger(__name__)
 
+# -------------------------------------------------------------------------
+# RESMİ DSİ 2021 AKIM GÖZLEM YILLIĞI ANAHTAR EĞRİLERİ (RATING CURVES)
+# -------------------------------------------------------------------------
+OFFICIAL_DSI_RATING_CURVES = {
+    "D01A003": {
+        "curve_no": 15,
+        "station_name": "Kirişhane AGİ",
+        "h0_datum_m": 30.00,
+        "drainage_area_km2": 34990.0,
+        # Seviye (cm) -> Debi (m3/s)
+        "points": [
+            (30, 28.5), (45, 41.8), (60, 56.5), (75, 73.0), (90, 91.0),
+            (105, 111.0), (130, 148.0), (160, 199.0), (190, 257.0), (220, 320.0),
+            (250, 390.0), (280, 462.0), (310, 537.0), (340, 616.0), (370, 700.0),
+            (400, 787.0), (430, 875.0), (460, 966.0), (490, 1059.0), (500, 1090.0)
+        ]
+    },
+    "D01A026": {
+        "curve_no": 9,
+        "station_name": "İpsala Gümrük Köprüsü AGİ",
+        "h0_datum_m": 11.00,
+        "drainage_area_km2": 50030.0,
+        "points": [
+            (11, 15.5), (35, 32.5), (60, 52.0), (85, 74.5), (110, 98.5),
+            (135, 126.0), (170, 165.0), (220, 229.0), (270, 299.0), (320, 376.0),
+            (370, 458.0), (420, 544.0), (470, 634.0), (520, 724.0), (570, 818.0),
+            (620, 913.0), (670, 1008.0), (720, 1103.0), (770, 1198.0)
+        ]
+    },
+    "D01A078": {
+        "curve_no": 7,
+        "station_name": "Değirmanyeni AGİ",
+        "h0_datum_m": 35.00,
+        "drainage_area_km2": 8099.0,
+        "points": [
+            (100, 0.98), (130, 4.40), (160, 11.7), (190, 21.6), (220, 33.1),
+            (250, 46.0), (280, 60.7), (310, 77.0), (340, 96.6), (370, 120.0),
+            (400, 144.0), (430, 168.0), (460, 192.0), (490, 216.0), (520, 240.0),
+            (550, 265.0), (560, 274.0), (570, 283.0), (580, 292.0), (590, 302.0)
+        ]
+    },
+    "E01A013": {
+        "curve_no": 7,
+        "station_name": "Suakacağı AGİ",
+        "h0_datum_m": 48.00,
+        "drainage_area_km2": 7929.1,
+        "points": [
+            (180, 1.0), (210, 9.2), (240, 21.1), (270, 31.3), (300, 43.1),
+            (330, 55.9), (360, 69.0), (390, 83.0), (420, 98.5), (450, 116.0),
+            (480, 134.0), (510, 152.0), (540, 170.0), (570, 191.0), (600, 213.0),
+            (610, 221.0), (620, 229.0), (630, 237.0), (640, 245.0), (650, 253.0)
+        ]
+    }
+}
+# Backward-compatibility alias map for legacy IDs
+OFFICIAL_DSI_RATING_CURVES["D01A001"] = OFFICIAL_DSI_RATING_CURVES["D01A003"]
+OFFICIAL_DSI_RATING_CURVES["D01A005"] = OFFICIAL_DSI_RATING_CURVES["E01A013"]
+OFFICIAL_DSI_RATING_CURVES["D01A006"] = OFFICIAL_DSI_RATING_CURVES["D01A078"]
+
 
 class HydrologyEngine:
     """
@@ -129,8 +188,57 @@ class HydrologyEngine:
         return accepted_obs, qc_summary
 
     # -------------------------------------------------------------------------
-    # 2. VERTICAL DATUM & GAUGE BIAS CORRECTION
+    # 2. VERTICAL DATUM, RESMİ EŞEL KOTU & RATING CURVE DÖNÜŞÜMÜ
     # -------------------------------------------------------------------------
+    def stage_cm_to_discharge(self, station_id: str, stage_cm: float) -> float:
+        """
+        Calculates official streamflow discharge (m3/s) from river stage (cm)
+        using the DSİ 2021 Rating Curve calibration points and power-law extension.
+        """
+        cfg = OFFICIAL_DSI_RATING_CURVES.get(station_id) or OFFICIAL_DSI_RATING_CURVES["D01A003"]
+        pts = cfg["points"]
+        stages = [p[0] for p in pts]
+        flows = [p[1] for p in pts]
+
+        if stage_cm <= stages[0]:
+            ratio = max(0.0, stage_cm) / stages[0]
+            return round(flows[0] * (ratio ** 1.5), 2)
+        elif stage_cm >= stages[-1]:
+            # Extrapolate beyond maximum curve point using Manning/rating curve derivative
+            slope = (flows[-1] - flows[-2]) / (stages[-1] - stages[-2])
+            extrapolated = flows[-1] + slope * (stage_cm - stages[-1])
+            return round(extrapolated, 2)
+        else:
+            return round(float(np.interp(stage_cm, stages, flows)), 2)
+
+    def discharge_to_stage_cm(self, station_id: str, discharge_m3s: float) -> float:
+        """
+        Inverse calculation: determines water stage (cm) from streamflow discharge (m3/s).
+        """
+        cfg = OFFICIAL_DSI_RATING_CURVES.get(station_id) or OFFICIAL_DSI_RATING_CURVES["D01A003"]
+        pts = cfg["points"]
+        stages = [p[0] for p in pts]
+        flows = [p[1] for p in pts]
+
+        if discharge_m3s <= flows[0]:
+            ratio = max(0.0, discharge_m3s) / flows[0]
+            return round(stages[0] * (ratio ** 0.67), 1)
+        elif discharge_m3s >= flows[-1]:
+            slope = (stages[-1] - stages[-2]) / (flows[-1] - flows[-2])
+            return round(stages[-1] + slope * (discharge_m3s - flows[-1]), 1)
+        else:
+            return round(float(np.interp(discharge_m3s, flows, stages)), 1)
+
+    def wse_to_discharge(self, station_id: str, wse_m: float) -> float:
+        """
+        Converts absolute Water Surface Elevation (WSE in meters) into discharge (m3/s)
+        using the official station zero-gauge elevation (H0).
+        """
+        cfg = OFFICIAL_DSI_RATING_CURVES.get(station_id) or OFFICIAL_DSI_RATING_CURVES["D01A003"]
+        h0 = cfg["h0_datum_m"]
+        stage_cm = max(0.0, (wse_m - h0) * 100.0)
+        return self.stage_cm_to_discharge(station_id, stage_cm)
+
     def compute_vertical_datum_offset(
         self,
         swot_wse_list: List[float],
