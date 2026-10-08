@@ -313,6 +313,76 @@
         </div>
       </div>
 
+      <!-- PANEL: SATELLITE (SWOT) VS. GROUND TRUTH (DSİ AGİ) CONCORDANCE & VALIDATION PANEL -->
+      <div class="bg-slate-900 border border-slate-800 rounded-xl p-4 shadow-lg flex flex-col">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800 pb-3">
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40">UYDU &amp; YER DOĞRULAMASI</span>
+              <h2 class="font-bold text-slate-200 text-sm flex items-center gap-1.5">
+                <i data-lucide="scale" class="w-4 h-4 text-amber-400"></i>
+                <span>Uydu (SWOT) vs. Gerçek Nehir Akımı (DSİ AGİ) Uyum Analizi</span>
+              </h2>
+            </div>
+            <p class="text-[11px] text-slate-400 mt-1">
+              NASA/CNES SWOT KaRIn uydu geçiş debileri ile DSİ akım gözlem istasyonundaki eşzamanlı gerçek debilerin 1:1 saçılım ve sapma karşılaştırması
+            </p>
+          </div>
+
+          <!-- Mod Seçicileri: 1:1 Saçılım | Eşzamanlı Sütunlar | Artık Hata -->
+          <div class="flex items-center space-x-1 bg-slate-800 p-1 rounded-lg text-xs self-start sm:self-auto">
+            <button id="val-btn-scatter" class="val-mode-btn active-tab px-2.5 py-1 rounded font-semibold text-sky-400 bg-slate-900 transition">
+              1:1 Saçılım (Scatter)
+            </button>
+            <button id="val-btn-paired" class="val-mode-btn px-2.5 py-1 rounded font-semibold text-slate-400 hover:text-slate-200 transition">
+              Eşzamanlı Sütunlar
+            </button>
+            <button id="val-btn-residuals" class="val-mode-btn px-2.5 py-1 rounded font-semibold text-slate-400 hover:text-slate-200 transition">
+              Fark &amp; Sapma (ΔQ)
+            </button>
+          </div>
+        </div>
+
+        <!-- Uyum & İstatistiksel Doğruluk Skor Kartları -->
+        <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 my-3 text-xs">
+          <div class="bg-slate-950/70 p-2.5 rounded-lg border border-slate-800 flex flex-col justify-between">
+            <span class="text-[10px] text-slate-400 font-medium">Doğrusal Uyum (R²)</span>
+            <div id="val-metric-r2" class="text-base font-bold font-mono text-emerald-400 mt-0.5">--</div>
+            <span class="text-[9px] text-slate-500">1:1 Uyum Gücü</span>
+          </div>
+          <div class="bg-slate-950/70 p-2.5 rounded-lg border border-slate-800 flex flex-col justify-between">
+            <span class="text-[10px] text-slate-400 font-medium">Nash-Sutcliffe (NSE)</span>
+            <div id="val-metric-nse" class="text-base font-bold font-mono text-sky-400 mt-0.5">--</div>
+            <span class="text-[9px] text-slate-500">Model Etkinliği</span>
+          </div>
+          <div class="bg-slate-950/70 p-2.5 rounded-lg border border-slate-800 flex flex-col justify-between">
+            <span class="text-[10px] text-slate-400 font-medium">Bağıl Yanlılık (PBIAS)</span>
+            <div id="val-metric-pbias" class="text-base font-bold font-mono text-cyan-400 mt-0.5">-- %</div>
+            <span class="text-[9px] text-slate-500">Sistematik Sapma</span>
+          </div>
+          <div class="bg-slate-950/70 p-2.5 rounded-lg border border-slate-800 flex flex-col justify-between">
+            <span class="text-[10px] text-slate-400 font-medium">Ortalama Hata (MAE)</span>
+            <div id="val-metric-mae" class="text-base font-bold font-mono text-amber-400 mt-0.5">-- m³/s</div>
+            <span class="text-[9px] text-slate-500">Mutlak Ortalama Fark</span>
+          </div>
+          <div class="bg-slate-950/70 p-2.5 rounded-lg border border-slate-800 flex flex-col justify-between col-span-2 sm:col-span-1">
+            <span class="text-[10px] text-slate-400 font-medium">Eşleşen Geçiş (N)</span>
+            <div id="val-metric-n" class="text-base font-bold font-mono text-indigo-400 mt-0.5">-- Nokta</div>
+            <span class="text-[9px] text-slate-500">Eşzamanlı Ölçüm</span>
+          </div>
+        </div>
+
+        <!-- Plotly Grafiği Konteyneri -->
+        <div class="w-full h-[340px]">
+          <div id="validation-chart" class="w-full h-full"></div>
+        </div>
+
+        <!-- Hidrolojik Değerlendirme Açıklaması -->
+        <div id="validation-interpretation" class="mt-2 text-[11px] text-slate-300 bg-slate-950/60 p-2.5 rounded-lg border border-slate-800/80 flex items-center justify-between">
+          <span>Yükleniyor...</span>
+        </div>
+      </div>
+
       <!-- PANEL 2 (PART 2): MEMBADAN MANSABA RIDGELINE (BOYUNA PROFİL) -->
       <div class="bg-slate-900 border border-slate-800 rounded-xl p-4 shadow-lg flex flex-col">
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800 pb-3">

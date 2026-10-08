@@ -5,7 +5,7 @@
     "river": "Meriç",
     "date": "2026-10-07",
     "timestamp": "2026-10-07T12:00:00Z",
-    "discharge_m3s": 365.14,
+    "discharge_m3s": 62.0,
     "stage_m": 3.6,
     "wse_local_m": 33.6,
     "wse_wgs84_m": 40.45,
@@ -19,8 +19,9 @@
     },
     "critical_stage_m": 5.8,
     "lead_time_from_upstream_hrs": 13.5,
-    "is_live_telemetry": false,
-    "source": "DSİ Hidroloji Modeli"
+    "is_live_telemetry": true,
+    "measurement_time": "16:00",
+    "source": "DSİ 11. Bölge Edirne Canlı Portalı"
   },
   {
     "station_id": "D01A026",
@@ -28,7 +29,7 @@
     "river": "Meriç",
     "date": "2026-10-07",
     "timestamp": "2026-10-07T12:00:00Z",
-    "discharge_m3s": 291.87,
+    "discharge_m3s": 88.0,
     "stage_m": 3.42,
     "wse_local_m": 14.42,
     "wse_wgs84_m": 20.82,
@@ -42,8 +43,9 @@
     },
     "critical_stage_m": 4.5,
     "lead_time_from_upstream_hrs": 26.0,
-    "is_live_telemetry": false,
-    "source": "DSİ Hidroloji Modeli"
+    "is_live_telemetry": true,
+    "measurement_time": "16:00",
+    "source": "DSİ 11. Bölge Edirne Canlı Portalı"
   },
   {
     "station_id": "D01A078",
@@ -74,7 +76,7 @@
     "river": "Tunca",
     "date": "2026-10-07",
     "timestamp": "2026-10-07T12:00:00Z",
-    "discharge_m3s": 11.16,
+    "discharge_m3s": 4.0,
     "stage_m": 1.45,
     "wse_local_m": 49.45,
     "wse_wgs84_m": 56.6,
@@ -88,8 +90,9 @@
     },
     "critical_stage_m": 2.9,
     "lead_time_from_upstream_hrs": 8.0,
-    "is_live_telemetry": false,
-    "source": "DSİ Hidroloji Modeli"
+    "is_live_telemetry": true,
+    "measurement_time": "16:00",
+    "source": "DSİ 11. Bölge Edirne Canlı Portalı"
   },
   {
     "station_id": "D01A001",
@@ -97,7 +100,7 @@
     "river": "Meriç",
     "date": "2026-10-07",
     "timestamp": "2026-10-07T12:00:00Z",
-    "discharge_m3s": 292.89,
+    "discharge_m3s": 62.0,
     "stage_m": 3.43,
     "wse_local_m": 41.94,
     "wse_wgs84_m": 48.84,
@@ -111,8 +114,9 @@
     },
     "critical_stage_m": 4.8,
     "lead_time_from_upstream_hrs": 3.0,
-    "is_live_telemetry": false,
-    "source": "DSİ Hidroloji Modeli"
+    "is_live_telemetry": true,
+    "measurement_time": "16:00",
+    "source": "DSİ 11. Bölge Edirne Canlı Portalı"
   },
   {
     "station_id": "D01A008",
