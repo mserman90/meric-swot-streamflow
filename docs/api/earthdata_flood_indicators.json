@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-10-08T14:10:19Z",
+  "gpm_precipitation_24h_mm": 14.5,
+  "gpm_precipitation_72h_accumulated_mm": 37.3,
+  "smap_root_zone_moisture_m3m3": 0.23,
+  "soil_saturation_percent": 34.4,
+  "amc_class": "AMC-II (Orta Doygunluk - Standart Akış)",
+  "runoff_coefficient": 0.45,
+  "runoff_potential_score": 40.2,
+  "status": "NORMAL",
+  "hydrological_interpretation": "Kök bölgesi toprak doygunluğu %34.4. Toprak nemi AMC-II (Orta Doygunluk - Standart Akış) kategorisindedir. Toprağın su tutma kapasitesi mevcuttur; ani sığ taşkın riski düşüktür.",
+  "data_source": "NASA Earthdata Flood Portal (GPM IMERG + SMAP L4 + GLDAS)"
+}

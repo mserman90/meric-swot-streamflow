@@ -1,0 +1,51 @@
+{
+  "theme": "NASA Earthdata Floods",
+  "user": "mserman",
+  "basin_bbox": "25.8,40.8,27.2,42.4",
+  "products": [
+    {
+      "product_name": "GPM IMERG Final / Early Precipitation",
+      "short_name": "GPM_3IMERGDF",
+      "daac": "GES DISC",
+      "theme": "Yağış (Precipitation)",
+      "resolution_spatial": "0.1° (~10 km)",
+      "resolution_temporal": "30 dakika / Günlük",
+      "role_in_flood": "Havza geneline düşen toplam ve pik yağış girdisi.",
+      "direct_url": "https://disc.gsfc.nasa.gov/datasets/GPM_3IMERGDF_07/summary",
+      "opendap_url": "https://gpm1.gesdisc.eosdis.nasa.gov/opendap/GPM_L3/GPM_3IMERGDF.07/"
+    },
+    {
+      "product_name": "SMAP L4 Surface & Root Zone Soil Moisture",
+      "short_name": "SPL4SMGP",
+      "daac": "NSIDC / LP DAAC",
+      "theme": "Toprak Nemi & Doygunluk (Soil Moisture)",
+      "resolution_spatial": "9 km EASE-Grid",
+      "resolution_temporal": "3 saatlik",
+      "role_in_flood": "Kök bölgesi doygunluk oranı. Doygun toprakta yağış doğrudan yüzeysel akışa geçer.",
+      "direct_url": "https://nsidc.org/data/spl4smgp/versions/8",
+      "opendap_url": "https://n5eil02u.ecs.nsidc.org/opendap/SMAP/SPL4SMGP.008/"
+    },
+    {
+      "product_name": "GLDAS Noah Land Surface Model L4",
+      "short_name": "GLDAS_NOAH025_3H",
+      "daac": "GES DISC",
+      "theme": "Yüzey Akışı & Nem (Runoff & Moisture)",
+      "resolution_spatial": "0.25° (~25 km)",
+      "resolution_temporal": "3 saatlik",
+      "role_in_flood": "Yüzeysel akış (Surface Runoff Qs) ve yeraltı drenajı (Subsurface Runoff Qsb).",
+      "direct_url": "https://disc.gsfc.nasa.gov/datasets/GLDAS_NOAH025_3H_2.1/summary",
+      "opendap_url": "https://hydro1.gesdisc.eosdis.nasa.gov/opendap/GLDAS/GLDAS_NOAH025_3H.2.1/"
+    },
+    {
+      "product_name": "MODIS/VIIRS NRT Global Flood Product",
+      "short_name": "MCDWD_L3_NRT",
+      "daac": "LANCE / LP DAAC",
+      "theme": "Taşkın Yayılım Alanı (Water Extent)",
+      "resolution_spatial": "250 m",
+      "resolution_temporal": "Günlük (Near-Real-Time)",
+      "role_in_flood": "Mevcut nehir yatağı dışına taşan sel sularının ve göllenmelerin uzaktan algılanması.",
+      "direct_url": "https://earthdata.nasa.gov/learn/find-data/near-real-time/flood-products",
+      "opendap_url": "https://nrt3.modaps.eosdis.nasa.gov/archive/allData/61/MCDWD_L3_NRT/"
+    }
+  ]
+}

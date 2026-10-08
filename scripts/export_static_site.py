@@ -10,6 +10,7 @@ sys.path.insert(0, str(BASE_DIR))
 from app.services.hydrocron import HydrocronClient
 from app.services.dsi_client import DSIClient
 from app.services.hydrology_engine import HydrologyEngine
+from app.services.earthdata_flood import EarthdataFloodClient
 from app.config import GEOJSON_FILE
 
 def export_static_site():
@@ -22,6 +23,7 @@ def export_static_site():
     print("Initializing hydrology engine & clients...")
     hydrocron = HydrocronClient()
     dsi = DSIClient()
+    earthdata = EarthdataFloodClient()
     engine = HydrologyEngine(hydrocron, dsi)
     
     # 2. Export /api/basin/overview -> docs/api/basin_overview.json
@@ -117,6 +119,21 @@ def export_static_site():
             geojson_data = json.load(f)
         with open(api_dir / "geojson_reaches.json", "w", encoding="utf-8") as f:
             json.dump(geojson_data, f, ensure_ascii=False, indent=2)
+
+    # 8.5 Export NASA Earthdata Flood datasets & indicators
+    print("Exporting NASA Earthdata flood products & indicators...")
+    earthdata_products = {
+        "theme": "NASA Earthdata Floods",
+        "user": earthdata.user,
+        "basin_bbox": earthdata.bbox,
+        "products": earthdata.get_flood_thematic_catalog(),
+    }
+    with open(api_dir / "earthdata_products.json", "w", encoding="utf-8") as f:
+        json.dump(earthdata_products, f, ensure_ascii=False, indent=2)
+
+    earthdata_indicators = earthdata.compute_basin_flood_indicators(precipitation_24h_mm=14.5)
+    with open(api_dir / "earthdata_flood_indicators.json", "w", encoding="utf-8") as f:
+        json.dump(earthdata_indicators, f, ensure_ascii=False, indent=2)
 
     # 9. Export Hydrograph permutations
     print("Exporting hydrographs for all stations and spans...")

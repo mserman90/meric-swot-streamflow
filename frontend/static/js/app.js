@@ -41,6 +41,10 @@ async function fetchApi(endpoint, options = {}) {
           rejected_iqr: strictIQR ? 1 : 0
         }
       };
+    } else if (endpoint.startsWith("/api/earthdata/flood-indicators")) {
+      staticPath = `api/earthdata_flood_indicators.json`;
+    } else if (endpoint.startsWith("/api/earthdata/products")) {
+      staticPath = `api/earthdata_products.json`;
     } else {
       const cleanName = endpoint.replace("/api/", "").replace(/\//g, "_");
       staticPath = `api/${cleanName}.json`;
@@ -143,6 +147,8 @@ async function loadAllData() {
     loadHydrograph(),
     loadRidgeline(),
     loadEarlyWarnings(),
+    loadEarthdataFloodIndicators(),
+    loadEarthdataProducts(),
   ]);
 }
 
@@ -621,3 +627,82 @@ async function applyQCSimulator() {
     console.error("Error running QC filter:", err);
   }
 }
+
+async function loadEarthdataFloodIndicators() {
+  try {
+    const data = await fetchApi("/api/earthdata/flood-indicators");
+    if (!data) return;
+
+    // Quick metric values
+    const rainEl = document.getElementById("ed-gpm-rain");
+    const satEl = document.getElementById("ed-smap-sat");
+    const runoffEl = document.getElementById("ed-runoff-score");
+    const interpEl = document.getElementById("ed-interpretation");
+
+    if (rainEl) rainEl.innerText = `${data.gpm_precipitation_24h_mm} mm`;
+    if (satEl) satEl.innerText = `%${data.soil_saturation_percent}`;
+    if (runoffEl) runoffEl.innerText = `${data.runoff_potential_score}/100`;
+
+    if (interpEl) {
+      let statusBadge = `<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-950 border border-emerald-700 text-emerald-400">NORMAL DOYGUNLUK</span>`;
+      if (data.status === "CRITICAL_SATURATION") {
+        statusBadge = `<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-rose-950 border border-rose-700 text-rose-400 animate-pulse">KRİTİK DOYGUNLUK (AMC-III)</span>`;
+      } else if (data.status === "WATCH_SATURATION") {
+        statusBadge = `<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-950 border border-amber-700 text-amber-400">YÜKSEK DOYGUNLUK İKAZI</span>`;
+      }
+
+      interpEl.innerHTML = `
+        <div class="flex items-center justify-between mb-1.5">
+          <span class="font-semibold text-xs text-white">Hidrolojik Doygunluk Analizi:</span>
+          ${statusBadge}
+        </div>
+        <p class="text-[11px] leading-relaxed text-slate-300">${data.hydrological_interpretation}</p>
+        <div class="mt-2 pt-1.5 border-t border-slate-800/80 flex flex-wrap justify-between gap-1 text-[10px] text-slate-400">
+          <span>Kategori: <strong class="text-slate-200">${data.amc_class ? data.amc_class.split(' ')[0] : 'AMC-II'}</strong></span>
+          <span>Akış Katsayısı (C): <strong class="text-slate-200">${data.runoff_coefficient}</strong></span>
+          <span>72s Birikimli: <strong class="text-cyan-300">${data.gpm_precipitation_72h_accumulated_mm} mm</strong></span>
+        </div>
+      `;
+    }
+  } catch (err) {
+    console.error("Error loading Earthdata flood indicators:", err);
+  }
+}
+
+async function loadEarthdataProducts() {
+  try {
+    const data = await fetchApi("/api/earthdata/products");
+    const container = document.getElementById("ed-products-container");
+    if (!container) return;
+
+    const products = data.products || data.catalog || [];
+    if (products.length === 0) {
+      container.innerHTML = `<div class="text-slate-500 text-xs p-2">Katalog yüklenemedi.</div>`;
+      return;
+    }
+
+    container.innerHTML = products.map((p) => `
+      <div class="p-2.5 bg-slate-950/90 rounded border border-slate-800 text-[11px] space-y-1 hover:border-slate-700 transition">
+        <div class="flex items-center justify-between">
+          <span class="font-semibold text-sky-400 font-mono">${p.short_name}</span>
+          <span class="px-1.5 py-0.5 rounded text-[9px] font-bold bg-slate-800 text-slate-300 border border-slate-700">${p.daac}</span>
+        </div>
+        <div class="text-slate-300 font-medium text-[11px]">${p.product_name}</div>
+        <div class="text-slate-400 text-[10px] leading-tight">${p.role_in_flood}</div>
+        <div class="flex items-center gap-2 pt-1 text-[10px]">
+          <a href="${p.direct_url}" target="_blank" rel="noopener noreferrer" class="text-sky-400 hover:text-sky-300 hover:underline flex items-center gap-0.5">
+            <span>🔗 Portal</span>
+          </a>
+          ${p.opendap_url ? `
+          <a href="${p.opendap_url}" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 hover:underline flex items-center gap-0.5">
+            <span>🌐 OPeNDAP</span>
+          </a>` : ""}
+          <span class="text-slate-500 ml-auto text-[9px] font-mono">${p.resolution_spatial} • ${p.resolution_temporal}</span>
+        </div>
+      </div>
+    `).join("");
+  } catch (err) {
+    console.error("Error loading Earthdata products:", err);
+  }
+}
+

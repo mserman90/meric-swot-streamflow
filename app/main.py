@@ -16,6 +16,7 @@ from app.models import (
 from app.services.hydrocron import HydrocronClient
 from app.services.dsi_client import DSIClient
 from app.services.hydrology_engine import HydrologyEngine
+from app.services.earthdata_flood import EarthdataFloodClient
 
 # Setup logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(name)s: %(message)s")
@@ -39,6 +40,7 @@ app.add_middleware(
 # Initialize service instances
 hydrocron_client = HydrocronClient()
 dsi_client = DSIClient()
+earthdata_client = EarthdataFloodClient()
 hydrology_engine = HydrologyEngine(hydrocron_client, dsi_client)
 
 # Mount static files if directory exists
@@ -241,6 +243,28 @@ async def test_swot_qc_filter(
         "accepted_count": len(accepted),
         "sample_accepted": accepted[:5],
     }
+
+
+@app.get("/api/earthdata/products")
+async def get_earthdata_products():
+    """
+    NASA Earthdata Flood temalı veri ürünleri kataloğu (GPM, SMAP, GLDAS, MODIS).
+    """
+    catalog = earthdata_client.get_flood_thematic_catalog()
+    return {
+        "theme": "NASA Earthdata Floods",
+        "user": earthdata_client.user,
+        "basin_bbox": earthdata_client.bbox,
+        "products": catalog,
+    }
+
+
+@app.get("/api/earthdata/flood-indicators")
+async def get_earthdata_flood_indicators(precip_mm: float = Query(14.5, description="24 saatlik GPM yağışı (mm)")):
+    """
+    NASA Earthdata GPM yağış ve SMAP/GLDAS kök bölgesi toprak nemi doygunluk göstergeleri.
+    """
+    return earthdata_client.compute_basin_flood_indicators(precipitation_24h_mm=precip_mm)
 
 
 if __name__ == "__main__":
