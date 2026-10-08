@@ -87,8 +87,8 @@ function initMap() {
     maxZoom: 18,
   });
 
-  const lightLayer = L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
-    attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
+  const streetLayer = L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}", {
+    attribution: "Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, USGS",
     maxZoom: 19,
   });
 
@@ -100,7 +100,7 @@ function initMap() {
   const baseMaps = {
     "🗺️ Standart Harita (Aydınlık OSM)": osmLayer,
     "🏔️ Topografik Harita (Esri Topo)": topoLayer,
-    "⚪ Sade Açık Harita (CartoDB Positron)": lightLayer,
+    "🛣️ Açık Sokak Haritası (Esri Street)": streetLayer,
     "🛰️ Uydu Görüntüsü (Esri Satellite)": satelliteLayer,
   };
 
